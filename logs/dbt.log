@@ -1,0 +1,30 @@
+[0m14:37:30.124012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111500ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1157ae7a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1157ae890>]}
+
+
+============================== 14:37:30.126241 | 213be9cc-8180-4c2e-b577-4ce0562e003c ==============================
+[0m14:37:30.126241 [info ] [MainThread]: Running with dbt=1.9.6
+[0m14:37:30.126528 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/estherng/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init brazilian-ecommerce-project', 'send_anonymous_usage_stats': 'True'}
+[0m14:38:12.898286 [debug] [MainThread]: Starter project path: /opt/miniconda3/envs/elt/lib/python3.10/site-packages/dbt/include/starter_project
+[0m14:38:12.909713 [info ] [MainThread]: 
+Your new dbt project "brazillian_ecommerce_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:38:12.910070 [info ] [MainThread]: Setting up your profile.
+[0m14:41:37.432663 [info ] [MainThread]: Profile brazillian_ecommerce_project written to /Users/estherng/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:41:37.434157 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 247.34802, "process_in_blocks": "0", "process_kernel_time": 0.291066, "process_mem_max_rss": "233177088", "process_out_blocks": "0", "process_user_time": 1.514941}
+[0m14:41:37.435224 [debug] [MainThread]: Command `dbt init` succeeded at 14:41:37.435044 after 247.35 seconds
+[0m14:41:37.435697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111500ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1411a6620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1411a7490>]}
+[0m14:41:37.436138 [debug] [MainThread]: Flushing usage events
+[0m14:41:39.274494 [debug] [MainThread]: An error was encountered while trying to flush usage events
