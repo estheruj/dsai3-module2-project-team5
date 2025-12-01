@@ -29,7 +29,7 @@ mv ~/Downloads/kaggle.json ~/.kaggle/
 chmod 600 ~/.kaggle/kaggle.json
 
 # 4. Verify it works:
-kaggle datasets list --max-results 5
+kaggle datasets list 
 ```
 
 ### Step 1.3: Get Supabase Connection Details
@@ -167,6 +167,11 @@ git commit -m "Add .gitignore"
 ---
 
 ## Phase 4: Configure Meltano Extractors & Loaders
+meltano init meltano-csv
+cd meltano-csv
+meltano add extractor tap-csv --variant meltanolabs
+meltano add loader target-postgres --variant transferwise
+meltano add loader target-bigquery --variant z3z1ma 
 
 ### Step 4.1: Create meltano.yml Configuration
 ```bash
