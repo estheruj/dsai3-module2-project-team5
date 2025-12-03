@@ -31,6 +31,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   brazillian_ecommerce_project:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
+snapshots:
+  brazillian_ecommerce_project:
+    +target_schema: snapshots
+    +strategy: timestamp
+    +unique_key: id
+    +invalidate_hard_deletes: true

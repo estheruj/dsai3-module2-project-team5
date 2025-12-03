@@ -1,0 +1,13 @@
+brazillian_ecommerce_project:
+  outputs:
+    dev:
+      dataset: brazillian_ecommerce_project
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: dsai-module2-project
+      threads: 1
+      type: bigquery
+  target: dev
