@@ -1,11 +1,12 @@
 brazillian_ecommerce_project:
   outputs:
     dev:
-      dataset: brazillian_ecommerce_project
+      dataset: brazilian_ecommerce
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: US
-      method: oauth
+      method: service-account
+      keyfile: /Users/estherng/Library/CloudStorage/OneDrive-Personal/Module 2/dsai-module2-project-c41b83e002bf.json
       priority: interactive
       project: dsai-module2-project
       threads: 1

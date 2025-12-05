@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: brazillian_ecommerce_project
+  - name: brazilian_ecommerce
     description: >
       brazillian ecommerce data from kaggle
     database: dsai-module2-project
-    schema: brazillian_ecommerce_project
+    schema: brazilian_ecommerce
     
     tables:
       - name: customers
