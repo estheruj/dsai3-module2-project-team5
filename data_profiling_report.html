@@ -1,0 +1,1165 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Data Profiling Report - Brazilian E-commerce</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 20px;
+                background-color: #f5f5f5;
+            }
+            h1 {
+                color: #2c3e50;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 10px;
+            }
+            h2 {
+                color: #34495e;
+                margin-top: 30px;
+                border-bottom: 2px solid #95a5a6;
+                padding-bottom: 5px;
+            }
+            h3 {
+                color: #7f8c8d;
+                margin-top: 20px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                margin: 20px 0;
+            }
+            th {
+                background-color: #3498db;
+                color: white;
+                padding: 12px;
+                text-align: left;
+                font-weight: bold;
+                position: sticky;
+                top: 0;
+            }
+            td {
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            tr:hover {
+                background-color: #f0f0f0;
+            }
+            .metric {
+                font-weight: bold;
+                color: #2980b9;
+            }
+            .warning {
+                color: #e74c3c;
+                font-weight: bold;
+            }
+            .good {
+                color: #27ae60;
+                font-weight: bold;
+            }
+            .info-box {
+                background-color: #ecf0f1;
+                border-left: 4px solid #3498db;
+                padding: 15px;
+                margin: 20px 0;
+            }
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 30px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .summary-stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin: 20px 0;
+            }
+            .stat-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+            .stat-value {
+                font-size: 32px;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            .stat-label {
+                font-size: 14px;
+                opacity: 0.9;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>📊 Comprehensive Data Profiling Report</h1>
+            <h2>Brazilian E-commerce Dataset</h2>
+            
+            <div class="info-box">
+                <strong>Report Generated:</strong> 2025-12-05 22:10:20
+            </div>
+    
+            <h2>📈 Overall Statistics</h2>
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Total Tables</div>
+                    <div class="stat-value">9</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Columns</div>
+                    <div class="stat-value">53</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Rows</div>
+                    <div class="stat-value">1,550,922</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Memory (MB)</div>
+                    <div class="stat-value">308.0</div>
+                </div>
+            </div>
+    
+            <h2>📋 Detailed Profiling Results by Table</h2>
+    
+            <h3>olist_customers_dataset</h3>
+            <p><strong>Shape:</strong> 99,441 rows × 5 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>customer_id</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>99,441</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>06b8999e2fba1a1fbc88172c00ba8bc7</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>customer_unique_id</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>96,096</td>
+                            <td class="good">96.64%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>8d50f5eadf50201ccdcedfb9e2ac8455</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>customer_zip_code_prefix</strong></td>
+                            <td>int64</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>14,994</td>
+                            <td class="">15.08%</td>
+                            <td>35137.47</td>
+                            <td>29797.94</td>
+                            <td>1003.0</td>
+                            <td>99990.0</td>
+                            <td>0.00%</td>
+                            <td>22790</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>customer_city</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>4,119</td>
+                            <td class="">4.14%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>sao paulo</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>customer_state</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>27</td>
+                            <td class="">0.03%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>SP</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_geolocation_dataset</h3>
+            <p><strong>Shape:</strong> 1,000,163 rows × 5 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>geolocation_zip_code_prefix</strong></td>
+                            <td>int64</td>
+                            <td>1,000,163</td>
+                            <td class="good">0.00%</td>
+                            <td>19,015</td>
+                            <td class="">1.90%</td>
+                            <td>36574.17</td>
+                            <td>30549.34</td>
+                            <td>1001.0</td>
+                            <td>99990.0</td>
+                            <td>0.00%</td>
+                            <td>24220</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>geolocation_lat</strong></td>
+                            <td>float64</td>
+                            <td>1,000,163</td>
+                            <td class="good">0.00%</td>
+                            <td>717,363</td>
+                            <td class="">71.72%</td>
+                            <td>-21.18</td>
+                            <td>5.72</td>
+                            <td>-36.6053744107061</td>
+                            <td>45.06593318269697</td>
+                            <td>0.00%</td>
+                            <td>-27.102098999999946</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>geolocation_lng</strong></td>
+                            <td>float64</td>
+                            <td>1,000,163</td>
+                            <td class="good">0.00%</td>
+                            <td>717,615</td>
+                            <td class="">71.75%</td>
+                            <td>-46.39</td>
+                            <td>4.27</td>
+                            <td>-101.46676644931476</td>
+                            <td>121.10539381057764</td>
+                            <td>0.00%</td>
+                            <td>-48.62961349999995</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>geolocation_city</strong></td>
+                            <td>object</td>
+                            <td>1,000,163</td>
+                            <td class="good">0.00%</td>
+                            <td>8,011</td>
+                            <td class="">0.80%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>sao paulo</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>geolocation_state</strong></td>
+                            <td>object</td>
+                            <td>1,000,163</td>
+                            <td class="good">0.00%</td>
+                            <td>27</td>
+                            <td class="">0.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>SP</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_order_items_dataset</h3>
+            <p><strong>Shape:</strong> 112,650 rows × 7 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>order_id</strong></td>
+                            <td>object</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>98,666</td>
+                            <td class="">87.59%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>8272b63d03f5f79c56e9e4120aec44ef</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_item_id</strong></td>
+                            <td>int64</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>21</td>
+                            <td class="">0.02%</td>
+                            <td>1.20</td>
+                            <td>0.71</td>
+                            <td>1.0</td>
+                            <td>21.0</td>
+                            <td>0.00%</td>
+                            <td>1</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_id</strong></td>
+                            <td>object</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>32,951</td>
+                            <td class="">29.25%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>aca2eb7d00ea1a7b8ebd4e68314663af</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>seller_id</strong></td>
+                            <td>object</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>3,095</td>
+                            <td class="">2.75%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>6560211a19b47992c3666cc44a7e94c0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>shipping_limit_date</strong></td>
+                            <td>object</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>93,318</td>
+                            <td class="">82.84%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2017-07-21 18:25:23</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>price</strong></td>
+                            <td>float64</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>5,968</td>
+                            <td class="">5.30%</td>
+                            <td>120.65</td>
+                            <td>183.63</td>
+                            <td>0.85</td>
+                            <td>6735.0</td>
+                            <td>0.00%</td>
+                            <td>59.9</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>freight_value</strong></td>
+                            <td>float64</td>
+                            <td>112,650</td>
+                            <td class="good">0.00%</td>
+                            <td>6,999</td>
+                            <td class="">6.21%</td>
+                            <td>19.99</td>
+                            <td>15.81</td>
+                            <td>0.0</td>
+                            <td>409.68</td>
+                            <td>0.34%</td>
+                            <td>15.1</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_order_payments_dataset</h3>
+            <p><strong>Shape:</strong> 103,886 rows × 5 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>order_id</strong></td>
+                            <td>object</td>
+                            <td>103,886</td>
+                            <td class="good">0.00%</td>
+                            <td>99,440</td>
+                            <td class="good">95.72%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>fa65dad1b0e818e3ccc5cb0e39231352</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>payment_sequential</strong></td>
+                            <td>int64</td>
+                            <td>103,886</td>
+                            <td class="good">0.00%</td>
+                            <td>29</td>
+                            <td class="">0.03%</td>
+                            <td>1.09</td>
+                            <td>0.71</td>
+                            <td>1.0</td>
+                            <td>29.0</td>
+                            <td>0.00%</td>
+                            <td>1</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>payment_type</strong></td>
+                            <td>object</td>
+                            <td>103,886</td>
+                            <td class="good">0.00%</td>
+                            <td>5</td>
+                            <td class="">0.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>credit_card</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>payment_installments</strong></td>
+                            <td>int64</td>
+                            <td>103,886</td>
+                            <td class="good">0.00%</td>
+                            <td>24</td>
+                            <td class="">0.02%</td>
+                            <td>2.85</td>
+                            <td>2.69</td>
+                            <td>0.0</td>
+                            <td>24.0</td>
+                            <td>0.00%</td>
+                            <td>1</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>payment_value</strong></td>
+                            <td>float64</td>
+                            <td>103,886</td>
+                            <td class="good">0.00%</td>
+                            <td>29,077</td>
+                            <td class="">27.99%</td>
+                            <td>154.10</td>
+                            <td>217.49</td>
+                            <td>0.0</td>
+                            <td>13664.08</td>
+                            <td>0.01%</td>
+                            <td>50.0</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_order_reviews_dataset</h3>
+            <p><strong>Shape:</strong> 99,224 rows × 7 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>review_id</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="good">0.00%</td>
+                            <td>98,410</td>
+                            <td class="good">99.18%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>7b606b0d57b078384f0b58eac1d41d78</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_id</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="good">0.00%</td>
+                            <td>98,673</td>
+                            <td class="good">99.44%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>c88b1d1b157a9999ce368f218a407141</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>review_score</strong></td>
+                            <td>int64</td>
+                            <td>99,224</td>
+                            <td class="good">0.00%</td>
+                            <td>5</td>
+                            <td class="">0.01%</td>
+                            <td>4.09</td>
+                            <td>1.35</td>
+                            <td>1.0</td>
+                            <td>5.0</td>
+                            <td>0.00%</td>
+                            <td>5</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>review_comment_title</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="warning">88.34%</td>
+                            <td>4,527</td>
+                            <td class="">4.56%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>Recomendo</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>review_comment_message</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="warning">58.70%</td>
+                            <td>36,159</td>
+                            <td class="">36.44%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>Muito bom</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>review_creation_date</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="good">0.00%</td>
+                            <td>636</td>
+                            <td class="">0.64%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2017-12-19 00:00:00</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>review_answer_timestamp</strong></td>
+                            <td>object</td>
+                            <td>99,224</td>
+                            <td class="good">0.00%</td>
+                            <td>98,248</td>
+                            <td class="good">99.02%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2017-06-15 23:21:05</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_orders_dataset</h3>
+            <p><strong>Shape:</strong> 99,441 rows × 8 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>order_id</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>99,441</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>e481f51cbdc54678b7cc49136f2d6af7</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>customer_id</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>99,441</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>9ef432eb6251297304e76186b10a928d</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_status</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>8</td>
+                            <td class="">0.01%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>delivered</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_purchase_timestamp</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>98,875</td>
+                            <td class="good">99.43%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2018-04-11 10:48:14</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_approved_at</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="">0.16%</td>
+                            <td>90,733</td>
+                            <td class="good">91.24%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2018-02-27 04:31:10</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_delivered_carrier_date</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="">1.79%</td>
+                            <td>81,018</td>
+                            <td class="">81.47%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2018-05-09 15:48:00</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_delivered_customer_date</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="">2.98%</td>
+                            <td>95,664</td>
+                            <td class="good">96.20%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2018-05-08 23:38:46</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>order_estimated_delivery_date</strong></td>
+                            <td>object</td>
+                            <td>99,441</td>
+                            <td class="good">0.00%</td>
+                            <td>459</td>
+                            <td class="">0.46%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>2017-12-20 00:00:00</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_products_dataset</h3>
+            <p><strong>Shape:</strong> 32,951 rows × 9 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>product_id</strong></td>
+                            <td>object</td>
+                            <td>32,951</td>
+                            <td class="good">0.00%</td>
+                            <td>32,951</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>1e9e8ef04dbcff4541ed26657ea517e5</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_category_name</strong></td>
+                            <td>object</td>
+                            <td>32,951</td>
+                            <td class="">1.85%</td>
+                            <td>73</td>
+                            <td class="">0.22%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>cama_mesa_banho</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_name_lenght</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">1.85%</td>
+                            <td>66</td>
+                            <td class="">0.20%</td>
+                            <td>48.48</td>
+                            <td>10.25</td>
+                            <td>5.0</td>
+                            <td>76.0</td>
+                            <td>0.00%</td>
+                            <td>60.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_description_lenght</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">1.85%</td>
+                            <td>2,960</td>
+                            <td class="">8.98%</td>
+                            <td>771.50</td>
+                            <td>635.12</td>
+                            <td>4.0</td>
+                            <td>3992.0</td>
+                            <td>0.00%</td>
+                            <td>404.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_photos_qty</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">1.85%</td>
+                            <td>19</td>
+                            <td class="">0.06%</td>
+                            <td>2.19</td>
+                            <td>1.74</td>
+                            <td>1.0</td>
+                            <td>20.0</td>
+                            <td>0.00%</td>
+                            <td>1.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_weight_g</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">0.01%</td>
+                            <td>2,204</td>
+                            <td class="">6.69%</td>
+                            <td>2276.47</td>
+                            <td>4282.04</td>
+                            <td>0.0</td>
+                            <td>40425.0</td>
+                            <td>0.01%</td>
+                            <td>200.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_length_cm</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">0.01%</td>
+                            <td>99</td>
+                            <td class="">0.30%</td>
+                            <td>30.82</td>
+                            <td>16.91</td>
+                            <td>7.0</td>
+                            <td>105.0</td>
+                            <td>0.00%</td>
+                            <td>16.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_height_cm</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">0.01%</td>
+                            <td>102</td>
+                            <td class="">0.31%</td>
+                            <td>16.94</td>
+                            <td>13.64</td>
+                            <td>2.0</td>
+                            <td>105.0</td>
+                            <td>0.00%</td>
+                            <td>10.0</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_width_cm</strong></td>
+                            <td>float64</td>
+                            <td>32,951</td>
+                            <td class="">0.01%</td>
+                            <td>95</td>
+                            <td class="">0.29%</td>
+                            <td>23.20</td>
+                            <td>12.08</td>
+                            <td>6.0</td>
+                            <td>118.0</td>
+                            <td>0.00%</td>
+                            <td>11.0</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>olist_sellers_dataset</h3>
+            <p><strong>Shape:</strong> 3,095 rows × 4 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>seller_id</strong></td>
+                            <td>object</td>
+                            <td>3,095</td>
+                            <td class="good">0.00%</td>
+                            <td>3,095</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>3442f8959a84dea7ee197c632cb2df15</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>seller_zip_code_prefix</strong></td>
+                            <td>int64</td>
+                            <td>3,095</td>
+                            <td class="good">0.00%</td>
+                            <td>2,246</td>
+                            <td class="">72.57%</td>
+                            <td>32291.06</td>
+                            <td>32713.45</td>
+                            <td>1001.0</td>
+                            <td>99730.0</td>
+                            <td>0.00%</td>
+                            <td>14940</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>seller_city</strong></td>
+                            <td>object</td>
+                            <td>3,095</td>
+                            <td class="good">0.00%</td>
+                            <td>611</td>
+                            <td class="">19.74%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>sao paulo</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>seller_state</strong></td>
+                            <td>object</td>
+                            <td>3,095</td>
+                            <td class="good">0.00%</td>
+                            <td>23</td>
+                            <td class="">0.74%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>SP</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+            <h3>product_category_name_translation</h3>
+            <p><strong>Shape:</strong> 71 rows × 3 columns</p>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Data Type</th>
+                            <th>Total Count</th>
+                            <th>Null %</th>
+                            <th>Distinct</th>
+                            <th>Distinct %</th>
+                            <th>Mean</th>
+                            <th>Std Dev</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                            <th>Zeros %</th>
+                            <th>Most Frequent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                        <tr>
+                            <td><strong>product_id</strong></td>
+                            <td>int64</td>
+                            <td>71</td>
+                            <td class="good">0.00%</td>
+                            <td>71</td>
+                            <td class="good">100.00%</td>
+                            <td>36.00</td>
+                            <td>20.64</td>
+                            <td>1.0</td>
+                            <td>71.0</td>
+                            <td>0.00%</td>
+                            <td>1</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_category_name</strong></td>
+                            <td>object</td>
+                            <td>71</td>
+                            <td class="good">0.00%</td>
+                            <td>71</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>beleza_saude</td>
+                        </tr>
+            
+                        <tr>
+                            <td><strong>product_category_name_english</strong></td>
+                            <td>object</td>
+                            <td>71</td>
+                            <td class="good">0.00%</td>
+                            <td>71</td>
+                            <td class="good">100.00%</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>0.00%</td>
+                            <td>health_beauty</td>
+                        </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        
+        </div>
+    </body>
+    </html>
+    

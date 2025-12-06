@@ -1,0 +1,104 @@
+
+================================================================================
+DATA PROFILING SUMMARY OF FINDINGS
+================================================================================
+
+1. OVERALL DATASET STATISTICS
+--------------------------------------------------------------------------------
+   • Total Tables: 9
+   • Total Columns: 53
+   • Total Rows (across all tables): 1,550,922
+
+2. TABLE-LEVEL SUMMARY
+--------------------------------------------------------------------------------
+   • olist_customers_dataset:
+     - Shape: 99,441 rows × 5 columns
+     - Memory Usage: 26.59 MB
+   • olist_geolocation_dataset:
+     - Shape: 1,000,163 rows × 5 columns
+     - Memory Usage: 130.26 MB
+   • olist_order_items_dataset:
+     - Shape: 112,650 rows × 7 columns
+     - Memory Usage: 35.99 MB
+   • olist_order_payments_dataset:
+     - Shape: 103,886 rows × 5 columns
+     - Memory Usage: 16.23 MB
+   • olist_order_reviews_dataset:
+     - Shape: 99,224 rows × 7 columns
+     - Memory Usage: 39.12 MB
+   • olist_orders_dataset:
+     - Shape: 99,441 rows × 8 columns
+     - Memory Usage: 52.94 MB
+   • olist_products_dataset:
+     - Shape: 32,951 rows × 9 columns
+     - Memory Usage: 6.30 MB
+   • olist_sellers_dataset:
+     - Shape: 3,095 rows × 4 columns
+     - Memory Usage: 0.59 MB
+   • product_category_name_translation:
+     - Shape: 71 rows × 3 columns
+     - Memory Usage: 0.01 MB
+
+3. DATA QUALITY FINDINGS
+--------------------------------------------------------------------------------
+   ⚠ COLUMNS WITH HIGH NULL PERCENTAGE (>50%):
+     - olist_order_reviews_dataset.review_comment_title: 88.34% null (87,656 of 99,224)
+     - olist_order_reviews_dataset.review_comment_message: 58.70% null (58,247 of 99,224)
+
+   ℹ POTENTIAL PRIMARY KEY COLUMNS (≥99% distinct values):
+     - olist_customers_dataset.customer_id: 100.00% distinct
+     - olist_order_reviews_dataset.review_id: 99.18% distinct
+     - olist_order_reviews_dataset.order_id: 99.44% distinct
+     - olist_order_reviews_dataset.review_answer_timestamp: 99.02% distinct
+     - olist_orders_dataset.order_id: 100.00% distinct
+     - olist_orders_dataset.customer_id: 100.00% distinct
+     - olist_orders_dataset.order_purchase_timestamp: 99.43% distinct
+     - olist_products_dataset.product_id: 100.00% distinct
+     - olist_sellers_dataset.seller_id: 100.00% distinct
+     - product_category_name_translation.product_id: 100.00% distinct
+     - product_category_name_translation.product_category_name: 100.00% distinct
+     - product_category_name_translation.product_category_name_english: 100.00% distinct
+
+
+4. DATA TYPE ANALYSIS
+--------------------------------------------------------------------------------
+   • object: 33 columns (62.3%)
+   • float64: 12 columns (22.6%)
+   • int64: 8 columns (15.1%)
+
+5. NUMERIC COLUMN INSIGHTS
+--------------------------------------------------------------------------------
+   Top 5 columns with highest variability (Coefficient of Variation):
+     - olist_products_dataset.product_weight_g: CV = 1.88 (mean: 2276.47, std: 4282.04)
+     - olist_order_items_dataset.price: CV = 1.52 (mean: 120.65, std: 183.63)
+     - olist_order_payments_dataset.payment_value: CV = 1.41 (mean: 154.10, std: 217.49)
+     - olist_sellers_dataset.seller_zip_code_prefix: CV = 1.01 (mean: 32291.06, std: 32713.45)
+     - olist_order_payments_dataset.payment_installments: CV = 0.94 (mean: 2.85, std: 2.69)
+
+6. STRING COLUMN INSIGHTS
+--------------------------------------------------------------------------------
+   Top 5 columns with longest average string length:
+     - olist_order_reviews_dataset.review_comment_message: avg = 68.6 chars (min: 1, max: 208)
+     - olist_customers_dataset.customer_id: avg = 32.0 chars (min: 32, max: 32)
+     - olist_customers_dataset.customer_unique_id: avg = 32.0 chars (min: 32, max: 32)
+     - olist_order_items_dataset.order_id: avg = 32.0 chars (min: 32, max: 32)
+     - olist_order_items_dataset.product_id: avg = 32.0 chars (min: 32, max: 32)
+
+7. CARDINALITY ANALYSIS
+--------------------------------------------------------------------------------
+   Low cardinality columns (≤20 distinct values - good for categorical analysis):
+     - olist_order_payments_dataset.payment_type: 5 distinct values
+     - olist_order_reviews_dataset.review_score: 5 distinct values
+     - olist_orders_dataset.order_status: 8 distinct values
+     - olist_products_dataset.product_photos_qty: 19 distinct values
+
+8. RECOMMENDATIONS
+--------------------------------------------------------------------------------
+   • Address high null percentages in columns - consider imputation or exclusion
+   • Convert 5 low-cardinality object columns to categorical dtype for memory efficiency
+   • 12 columns identified as potential primary/foreign keys - verify relationships
+   • 14 numeric columns may contain outliers - consider outlier detection and treatment
+
+================================================================================
+END OF SUMMARY
+================================================================================
