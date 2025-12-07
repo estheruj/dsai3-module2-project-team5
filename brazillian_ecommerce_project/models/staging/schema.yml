@@ -1,6 +1,13 @@
 version: 2
 
 models:
+  - name: stg_category_translation
+    description: >
+      A staged model for stg_category_translation data.
+    columns:
+      - name: product_id
+        description: The primary key of the product.
+
   - name: stg_customers
     description: >
       A staged model for raw customer data.
@@ -19,6 +26,13 @@ models:
       - name: customer_state
         description: State where the customer is located.
 
+  - name: stg_geolocation
+    description: >
+      A staged model for stg_geolocation data.
+    columns:
+      - name: geolocation_city
+        description: geolocation_city.
+
   - name: stg_order_items
     description: >
       A staged model for raw order line-item data.
@@ -35,26 +49,6 @@ models:
         description: The ID of the seller responsible for the item.
       - name: price
         description: The price of the product.
-        tests:
-          - not_null
-
-  - name: stg_orders
-    description: >
-      A staged model for raw order header data.
-    columns:
-      - name: order_id
-        description: The primary key of the order.
-        tests:
-          - unique
-          - not_null
-      - name: customer_id
-        description: Foreign key linking to the stg_customers model.
-        tests:
-          - not_null
-      - name: order_status
-        description: The current status of the order
-      - name: order_purchase_timestamp
-        description: When the customer made the purchase.
         tests:
           - not_null
 
@@ -90,6 +84,26 @@ models:
           - not_null
       - name: review_score
         description: The rating given by the customer.
+        tests:
+          - not_null
+          
+  - name: stg_orders
+    description: >
+      A staged model for raw order header data.
+    columns:
+      - name: order_id
+        description: The primary key of the order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Foreign key linking to the stg_customers model.
+        tests:
+          - not_null
+      - name: order_status
+        description: The current status of the order
+      - name: order_purchase_timestamp
+        description: When the customer made the purchase.
         tests:
           - not_null
 

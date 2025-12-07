@@ -15,4 +15,5 @@ sources:
       - name: order_reviews
       - name: products
       - name: sellers
+      - name: geolocation
       - name: product_category_name_translation
