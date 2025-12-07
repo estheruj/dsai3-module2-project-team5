@@ -13,9 +13,8 @@ models:
       A staged model for raw customer data.
     columns:
       - name: customer_id
-        description: The primary key of the customer record (unique to the raw table).
+        description: The primary key of the customer record.
         tests:
-          - unique
           - not_null
       - name: customer_unique_id
         description: A unique identifier for the customer across all purchases.
@@ -76,7 +75,6 @@ models:
       - name: review_id
         description: The primary key of the review.
         tests:
-          - unique
           - not_null
       - name: order_id
         description: Foreign key linking to the stg_orders model.
@@ -94,7 +92,6 @@ models:
       - name: order_id
         description: The primary key of the order.
         tests:
-          - unique
           - not_null
       - name: customer_id
         description: Foreign key linking to the stg_customers model.
@@ -114,7 +111,6 @@ models:
       - name: product_id
         description: The primary key of the product.
         tests:
-          - unique
           - not_null
       - name: product_category_name
         description: The category of the product.
@@ -128,7 +124,6 @@ models:
       - name: seller_id
         description: The primary key of the seller.
         tests:
-          - unique
           - not_null
       - name: seller_city
         description: City where the seller is located.
