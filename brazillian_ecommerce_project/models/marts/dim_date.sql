@@ -1,23 +1,30 @@
-with bounds as (
-    select
-        date(min(order_purchase_timestamp)) as min_date,
-        date(max(order_purchase_timestamp)) as max_date
-    from {{ ref('stg_orders') }}
-),
+{% set min_date_query %}
+    (SELECT MIN(DATE(order_purchase_timestamp)) FROM {{ ref('stg_orders') }})
+{% endset %}
 
-calendar as (
-    select
-        day as date
-    from bounds,
-    unnest(generate_date_array(min_date, max_date)) as day
-)
+{% set max_date_query %}
+    (SELECT DATE_ADD(MAX(DATE(order_purchase_timestamp)), INTERVAL 30 DAY) FROM {{ ref('stg_orders') }})
+{% endset %}
 
-select
-    cast(format_date('%Y%m%d', date) as int64) as date_key,
-    date,
-    extract(day      from date) as day,
-    extract(month    from date) as month,
-    extract(year     from date) as year,
-    extract(isoweek  from date) as week_of_year,
-    extract(quarter  from date) as quarter
-from calendar
+SELECT
+    CAST(FORMAT_DATE('%Y%m%d', date_day) AS INT64) AS date_key,
+    date_day AS full_date,
+    EXTRACT(YEAR FROM date_day) AS year,
+    EXTRACT(QUARTER FROM date_day) AS quarter,
+    EXTRACT(MONTH FROM date_day) AS month,
+    EXTRACT(DAY FROM date_day) AS day,
+    EXTRACT(ISOWEEK FROM date_day) AS week_of_year,
+    EXTRACT(DAYOFWEEK FROM date_day) AS day_of_week,
+    CASE
+        WHEN EXTRACT(DAYOFWEEK FROM date_day) = 1
+        OR EXTRACT(DAYOFWEEK FROM date_day) = 7
+        THEN TRUE
+        ELSE FALSE
+    END AS is_weekend
+FROM UNNEST(
+    GENERATE_DATE_ARRAY(
+        {{ min_date_query }},
+        {{ max_date_query }},
+        INTERVAL 1 DAY
+    )
+) AS date_day
