@@ -1,6 +1,6 @@
 SELECT Distinct
     S.seller_id,
-    L.zip_prefix AS seller_zip_prefix,
+    S.seller_zip_code_prefix AS seller_zip_prefix,
     S.seller_city,
     S.seller_state,
     L.location_key
