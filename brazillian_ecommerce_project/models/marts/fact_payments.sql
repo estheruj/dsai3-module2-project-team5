@@ -1,5 +1,5 @@
 SELECT 
-  GENERATE_UUID() AS payment_key,
+  {{ dbt_utils.generate_surrogate_key(['order_id']) }} AS payment_key,
   order_id, 
   payment_sequential, 
   payment_type, 

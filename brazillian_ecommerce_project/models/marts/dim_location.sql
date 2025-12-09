@@ -1,5 +1,5 @@
 SELECT 
-  {{ dbt_utils.generate_surrogate_key(['zip_prefix']) }} AS location_key,
+  {{ dbt_utils.generate_surrogate_key(['zip_prefix'])}} AS location_key,
   zip_prefix, 
   city, 
   state, 
