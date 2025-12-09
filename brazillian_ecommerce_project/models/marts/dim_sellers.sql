@@ -6,5 +6,4 @@ SELECT Distinct
     L.location_key
 FROM {{ ref('stg_sellers') }} S
 LEFT JOIN {{ ref('dim_location') }} L
-  ON S.seller_state = L.state
-LIMIT 100
+  ON S.seller_zip_code_prefix = L.zip_prefix
