@@ -1,7 +1,7 @@
 SELECT
     review_id,
     order_id,
-    CAST(review_score AS INT) AS review_score,
+    SAFE_CAST(review_score AS INT) AS review_score,
     review_comment_title,
     review_comment_message,
     SAFE_CAST(review_creation_date AS TIMESTAMP) AS review_creation_date,
