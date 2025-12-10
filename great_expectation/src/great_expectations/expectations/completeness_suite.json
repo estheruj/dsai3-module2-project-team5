@@ -1,0 +1,44 @@
+{
+  "expectation_suite_name": "completeness_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "min_value": 1,
+        "max_value": 1000000
+      },
+      "meta": {
+        "description": "Check that the table has a reasonable number of rows."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "column_name",
+        "value_set": ["value1", "value2", "value3"]
+      },
+      "meta": {
+        "description": "Check that the column values are within a specified set."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "column_name"
+      },
+      "meta": {
+        "description": "Check that there are no null values in the column."
+      }
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_greater_than",
+      "kwargs": {
+        "column": "column_name",
+        "threshold": 0.98
+      },
+      "meta": {
+        "description": "Check that the proportion of unique values in the column is greater than 98%."
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Quality Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Quality Dashboard</h1>
+        <div id="data-quality-summary">
+            <h2>Data Quality Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Name</th>
+                        <th>Column Name</th>
+                        <th>Completeness (%)</th>
+                        <th>Accuracy (%)</th>
+                        <th>Uniqueness (%)</th>
+                        <th>Validity (%)</th>
+                        <th>Consistency (%)</th>
+                        <th>Timeliness (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data quality metrics will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="threshold-status">
+            <h2>Threshold Status</h2>
+            <p>Data quality threshold is set at <strong>98%</strong>.</p>
+            <div id="status-message">
+                <!-- Status message will be dynamically updated here -->
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

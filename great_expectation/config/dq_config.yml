@@ -1,0 +1,20 @@
+threshold: 98
+checks:
+  completeness:
+    enabled: true
+    description: "Check for completeness of data in each column."
+  accuracy:
+    enabled: true
+    description: "Check for accuracy of data in each column."
+  uniqueness:
+    enabled: true
+    description: "Check for uniqueness of data in each column."
+  validity:
+    enabled: true
+    description: "Check for validity of data in each column."
+  consistency:
+    enabled: true
+    description: "Check for consistency of data across columns."
+  timeliness:
+    enabled: true
+    description: "Check for timeliness of data."

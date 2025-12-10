@@ -1,0 +1,15 @@
+{
+  "expectation_suite_name": "uniqueness_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "column_name",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check for uniqueness in the specified column."
+      }
+    }
+  ]
+}
