@@ -1,1 +1,256 @@
 version: 2
+
+models:
+  # --------------------------------------------------------------------------
+  # DIMENSION MODELS (dim_*)
+  # --------------------------------------------------------------------------
+  - name: dim_category
+    description: "A dimension table containing product categories and their English translation. Key is the product category name."
+    columns:
+      - name: product_category_name
+        description: "Product category name in Portuguese."
+        tests:
+          - unique
+          - not_null
+      - name: product_category_name_english
+        description: "The translated product category name in English."
+
+  - name: dim_customers
+    description: "A dimension table for customer information, including their location details."
+    columns:
+      - name: customer_id
+        description: "The identifier for the customer."
+        tests:
+          - not_null
+      - name: customer_unique_id
+        description: "An identifier for the customer across all purchases."
+      - name: customer_zip_prefix
+        description: "The first 5 digits of the customer's zip code."
+      - name: location_key
+        description: "The foreign key linking to the location dimension."
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: location_key
+
+  - name: dim_date
+    description: "A comprehensive date dimension table derived from the orders data, useful for time-based analysis."
+    config:
+      materialized: table
+    columns:
+      - name: date_key
+        description: "Surrogate key for the date, formatted as YYYYMMDD (INT64)."
+        tests:
+          - unique
+          - not_null
+      - name: full_date
+        description: "The full date (DATE)."
+        tests:
+          - unique
+          - not_null
+      - name: year
+        description: "The calendar year (e.g., 2018)."
+      - name: quarter
+        description: "The calendar quarter (1-4)."
+      - name: month
+        description: "The month number (1-12)."
+      - name: is_weekend
+        description: "Boolean flag: TRUE if the day is a weekend (Saturday or Sunday)."
+        tests:
+          - accepted_values:
+              values: ['TRUE', 'FALSE']
+              quote: False
+
+  - name: dim_location
+    description: "A dimension table containing location details (city, state, coordinates) aggregated by zip code prefix."
+    columns:
+      - name: location_key
+        description: "The surrogate key for the location (a hash of the zip_prefix)."
+        tests:
+          - unique
+          - not_null
+      - name: zip_prefix
+        description: "The first 5 digits of the zip code."
+        tests:
+          - unique
+          - not_null
+      - name: city
+        description: "The most frequent city associated with the zip prefix."
+      - name: state
+        description: "The most frequent state associated with the zip prefix."
+
+  - name: dim_products
+    description: "A dimension table for product attributes, including category, name, and size/weight metrics."
+    columns:
+      - name: product_id
+        description: "The identifier for the product."
+        tests:
+          - not_null
+      - name: category_name_pt
+        description: "Product category name."
+      - name: product_weight_g
+        description: "Product weight in grams."
+
+  - name: dim_sellers
+    description: "A dimension table for seller information, including their location."
+    columns:
+      - name: seller_id
+        description: "The unique identifier for the seller."
+        tests:
+          - unique
+          - not_null
+      - name: seller_zip_prefix
+        description: "The first 5 digits of the seller's zip code."
+      - name: location_key
+        description: "The foreign key linking to the location dimension."
+        tests:
+          - relationships:
+              to: ref('dim_location')
+              field: location_key
+
+  # --------------------------------------------------------------------------
+  # FACT MODELS (fact_*)
+  # --------------------------------------------------------------------------
+  - name: fact_order_items
+    description: "A transaction fact table detailing each line item within an order."
+    columns:
+      - name: order_item_key
+        description: "Surrogate key for the specific order line item."
+        tests:
+          - not_null
+      - name: order_id
+        description: "The foreign key for the order."
+      - name: product_id
+        description: "The foreign key for the product."
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+      - name: seller_id
+        description: "The foreign key for the seller."
+        tests:
+          - relationships:
+              to: ref('dim_sellers')
+              field: seller_id
+      - name: price
+        description: "The price of the item."
+        tests:
+          - not_null
+          - dbt_utils.at_least_one
+      - name: gross_item_value
+        description: "The price plus the freight value (total item value)."
+        tests:
+          - not_null
+
+  - name: fact_orders
+    description: "A fact table summarizing core order metrics and lead times. Grain is one row per order."
+    columns:
+      - name: order_id
+        description: "The identifier for the order."
+        tests:
+          - not_null
+      - name: customer_id
+        description: "The foreign key for the customer."
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: order_status
+        description: "The current status of the order."
+      - name: purchase_date_key
+        description: "Date key for the purchase date."
+      - name: delivery_lead_time_days
+        description: "Total time in days from purchase to customer delivery."
+      - name: delivery_delay_days
+        description: "Difference in days between actual delivery and estimated delivery date."
+      - name: delivery_is_late
+        description: "Boolean flag: TRUE if the order was delivered later than estimated."
+
+  - name: fact_payments
+    description: "A transaction fact table detailing individual payments for an order."
+    columns:
+      - name: payment_key
+        description: "Surrogate key for the payment record."
+        tests:
+          - not_null
+      - name: order_id
+        description: "The foreign key for the order."
+      - name: payment_value
+        description: "The value of the individual payment."
+        tests:
+          - not_null
+          - dbt_utils.at_least_one
+
+  - name: fact_reviews
+    description: "A fact table detailing customer review information for orders."
+    columns:
+      - name: review_id
+        description: "The identifier for the review."
+        tests:
+          - not_null
+      - name: order_id
+        description: "The foreign key for the order being reviewed."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_id
+      - name: review_score
+        description: "The numeric score of the review (1 to 5)."
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+              quote: False
+      - name: low_score_flag
+        description: "Boolean flag: TRUE if the score is 2 or less."
+      - name: complaint_text_present
+        description: "Boolean flag: TRUE if the review comment message is not empty."
+
+  # --------------------------------------------------------------------------
+  # UTILITY MODELS (util_*)
+  # --------------------------------------------------------------------------
+  - name: util_geo_zip_centroid
+    description: "Intermediate model that determines the most frequent city/state and calculates the centroid coordinates for each zip code prefix."
+    columns:
+      - name: zip_prefix
+        description: "The zip code prefix, serving as the grain of this utility model."
+        tests:
+          - unique
+          - not_null
+      - name: latitude
+        description: "The calculated average latitude (centroid) for the zip prefix."
+      - name: longitude
+        description: "The calculated average longitude (centroid) for the zip prefix."
+
+  - name: util_orders_delivery_metrics
+    description: "Intermediate model calculating various order lead times and a delivery-is-late flag."
+    columns:
+      - name: order_id
+        description: "The order identifier."
+        tests:
+          - not_null
+      - name: delivery_is_late
+        description: "TRUE if the delivered date is after the estimated delivery date."
+
+  - name: util_payments_by_order
+    description: "Intermediate model aggregating payment information to the order grain, identifying the primary payment type."
+    columns:
+      - name: order_id
+        description: "The unique order identifier."
+        tests:
+          - unique
+          - not_null
+      - name: total_payment_value
+        description: "The sum of all payment values for the order."
+      - name: primary_payment_type
+        description: "The most frequent payment type used for the order (mode)."
+
+  - name: util_products_enriched
+    description: "Intermediate model joining product details with category name translations."
+    columns:
+      - name: product_id
+        description: "The product identifier."
+        tests:
+          - not_null
+      - name: product_category_name_english
+        description: "The English translation of the product category."

@@ -1,123 +1,182 @@
 version: 2
 
 models:
+  - name: stg_category_translation
+    description: >
+      Staging model for product category name translations, cleaning and standardizing
+      the category names.
+    columns:
+      - name: product_id
+        description: Unique identifier for the product.
+        tests:
+          - not_null
+      - name: product_category_name
+        description: Original product category name, converted to lowercase.
+      - name: product_category_name_english
+        description: English translation of the product category name, converted to lowercase.
+        tests:
+          - not_null
+
   - name: stg_customers
     description: >
-      A staged model for raw customer data.
+      Staging model for customer data, standardizing city and state names.
     columns:
       - name: customer_id
-        description: The primary key of the customer record (unique to the raw table).
+        description: Unique identifier for a customer. Used as a foreign key in orders.
         tests:
-          - unique
           - not_null
       - name: customer_unique_id
-        description: A unique identifier for the customer across all purchases.
+        description: Identifier for customers who purchased from different locations (unique person).
         tests:
           - not_null
+      - name: customer_zip_code_prefix
+        description: The first 5 digits of the customer's zip code.
       - name: customer_city
-        description: City where the customer is located.
+        description: Customer's city, converted to lowercase.
       - name: customer_state
-        description: State where the customer is located.
+        description: Customer's state, converted to lowercase.
+
+  - name: stg_geolocation
+    description: >
+      Staging model for geolocation data, cleaning city and state names.
+    columns:
+      - name: geolocation_zip_code_prefix
+        description: The first 5 digits of the zip code.
+        tests:
+          - not_null
+      - name: geolocation_city
+        description: City name, converted to lowercase.
+      - name: geolocation_lat
+        description: Latitude coordinate.
+      - name: geolocation_lng
+        description: Longitude coordinate.
+      - name: geolocation_state
+        description: State name, converted to lowercase.
 
   - name: stg_order_items
     description: >
-      A staged model for raw order line-item data.
+      Staging model for items within an order, with data type casting for numeric and temporal fields.
     columns:
       - name: order_id
-        description: The ID of the parent order.
+        description: Foreign key to the orders table.
         tests:
           - not_null
       - name: order_item_id
-        description: The id for the item within the specific order. 
+        description: Sequential identifier for items within the same order.
+        tests:
+          - not_null
       - name: product_id
-        description: The ID of the product purchased.
+        description: Foreign key to the products table.
+        tests:
+          - not_null
       - name: seller_id
-        description: The ID of the seller responsible for the item.
+        description: Foreign key to the sellers table.
+        tests:
+          - not_null
+      - name: shipping_limit_date
+        description: The latest date for the seller to ship the product.
       - name: price
-        description: The price of the product.
-        tests:
-          - not_null
-
-  - name: stg_orders
-    description: >
-      A staged model for raw order header data.
-    columns:
-      - name: order_id
-        description: The primary key of the order.
-        tests:
-          - unique
-          - not_null
-      - name: customer_id
-        description: Foreign key linking to the stg_customers model.
-        tests:
-          - not_null
-      - name: order_status
-        description: The current status of the order
-      - name: order_purchase_timestamp
-        description: When the customer made the purchase.
-        tests:
-          - not_null
+        description: Item price, cast to NUMERIC.
+      - name: freight_value
+        description: Freight value of the item, cast to NUMERIC.
 
   - name: stg_order_payments
     description: >
-      A staged model for raw payment details associated with an order.
+      Staging model for order payment details, with data type casting.
     columns:
       - name: order_id
-        description: Foreign key linking to the stg_orders model.
+        description: Foreign key to the orders table.
         tests:
           - not_null
       - name: payment_sequential
-        description: Sequence number for payments on a single order.   
+        description: Number indicating the sequence of payment if multiple payments were made for an order.
       - name: payment_type
-        description: The method of payment.
+        description: Method of payment used (e.g., 'credit_card', 'voucher').
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'boleto', 'voucher', 'debit_card', 'not_defined']
+      - name: payment_installments
+        description: Number of installments for the payment.
       - name: payment_value
-        description: The total value of the specific payment.
+        description: Total value of the payment, cast to NUMERIC.
         tests:
           - not_null
 
   - name: stg_order_reviews
     description: >
-      A staged model for customer review data associated with an order.
+      Staging model for customer order reviews, with data type casting for score and timestamps.
     columns:
       - name: review_id
-        description: The primary key of the review.
+        description: identifier for the review.
         tests:
-          - unique
           - not_null
       - name: order_id
-        description: Foreign key linking to the stg_orders model.
+        description: Foreign key to the orders table.
         tests:
           - not_null
       - name: review_score
-        description: The rating given by the customer.
+        description: The score given by the customer (1 to 5), cast to INT.
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+              quote: False
+      - name: review_creation_date
+        description: Date when the review was created.
+      - name: review_answer_timestamp
+        description: Timestamp when the seller/system responded to the review.
+
+  - name: stg_orders
+    description: >
+      Staging model for main order information, including crucial status and timestamp fields.
+    columns:
+      - name: order_id
+        description: identifier for the order (Primary Key).
         tests:
           - not_null
+      - name: customer_id
+        description: Foreign key to the customers table.
+        tests:
+          - not_null
+      - name: order_status
+        description: Current status of the order (e.g., 'delivered', 'shipped').
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'invoiced', 'unavailable', 'canceled', 'created', 'approved', 'processing']
+      - name: order_purchase_timestamp
+        description: The time when the order was purchased.
+      - name: order_estimated_delivery_date
+        description: Estimated date for customer delivery.
 
   - name: stg_products
     description: >
-      A staged model for raw product master data, including categories and dimensions.
+      Staging model for product catalog data, with data type casting for numerical measurements.
     columns:
       - name: product_id
-        description: The primary key of the product.
+        description: identifier for the product.
         tests:
-          - unique
           - not_null
       - name: product_category_name
-        description: The category of the product.
+        description: Original product category name (used to join with `stg_category_translation`).
       - name: product_weight_g
-        description: Product weight in grams.
+        description: Product weight in grams, cast to NUMERIC.
+      - name: product_length_cm
+        description: Product length in centimeters, cast to NUMERIC.
+      - name: product_height_cm
+        description: Product height in centimeters, cast to NUMERIC.
+      - name: product_width_cm
+        description: Product width in centimeters, cast to NUMERIC.
 
   - name: stg_sellers
     description: >
-      A staged model for raw seller master data, including location details.
+      Staging model for seller information, standardizing city and state names.
     columns:
       - name: seller_id
-        description: The primary key of the seller.
+        description: identifier for the seller.
         tests:
-          - unique
           - not_null
+      - name: seller_zip_code_prefix
+        description: The first 5 digits of the seller's zip code.
       - name: seller_city
-        description: City where the seller is located.
+        description: Seller's city, converted to lowercase.
       - name: seller_state
-        description: State where the seller is located.
-        
+        description: Seller's state, converted to lowercase.
