@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
+      POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster}
+      POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
+    ports:
+      - "5432:5432"
+    volumes:
+      - dagster_db:/var/lib/postgresql/data
+
+  dagster-webserver:
+    build:
+      context: .
+      dockerfile: orchestration/dagster/Dockerfile
+    depends_on:
+      - db
+    environment:
+      DAGSTER_HOME: /opt/dagster
+      DAGSTER_POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
+      DAGSTER_POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster}
+      DAGSTER_POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
+      DBT_PROFILES_DIR: ${DBT_PROFILES_DIR:-/opt/project/brazillian_ecommerce_project}
+      GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS:-/opt/project/dsai-module2-project-c41b83e002bf.json}
+      PYTHONPATH: /opt/dagster/app
+    volumes:
+      - ./orchestration/dagster/workspace.yaml:/opt/dagster/workspace.yaml:ro
+      - ./orchestration/dagster/dagster.yaml:/opt/dagster/dagster.yaml:ro
+      - ./:/opt/project
+      - dagster_storage:/opt/dagster/storage
+    command: dagster-webserver -h 0.0.0.0 -p 3000 -w /opt/dagster/workspace.yaml
+    ports:
+      - "3000:3000"
+
+  dagster-daemon:
+    build:
+      context: .
+      dockerfile: orchestration/dagster/Dockerfile
+    depends_on:
+      - db
+    environment:
+      DAGSTER_HOME: /opt/dagster
+      DAGSTER_POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
+      DAGSTER_POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster}
+      DAGSTER_POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
+      DBT_PROFILES_DIR: ${DBT_PROFILES_DIR:-/opt/project/brazillian_ecommerce_project}
+      GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS:-/opt/project/dsai-module2-project-c41b83e002bf.json}
+      PYTHONPATH: /opt/dagster/app
+    volumes:
+      - ./orchestration/dagster/workspace.yaml:/opt/dagster/workspace.yaml:ro
+      - ./orchestration/dagster/dagster.yaml:/opt/dagster/dagster.yaml:ro
+      - ./:/opt/project
+      - dagster_storage:/opt/dagster/storage
+    command: dagster-daemon run
+
+volumes:
+  dagster_db:
+  dagster_storage:
+
+

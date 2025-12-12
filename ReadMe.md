@@ -222,3 +222,54 @@ conda activate proj2
 ## License
 
 This project uses the Brazilian E-commerce Public Dataset by Olist, available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
+## Orchestration with Dagster
+
+This project includes Dagster to orchestrate the full ELT workflow and data quality checks on a schedule.
+
+### What it does
+
+- Runs Meltano EL: `tap-csv` → BigQuery
+- Runs dbt: `dbt build` (run + tests) for transforms and data quality
+- Schedules daily at 02:00 UTC
+
+### Prerequisites
+
+- Docker and Docker Compose installed
+- GCP service account JSON present at the project root (see earlier section)
+
+### Environment variables
+
+Create a `.env` file in the project root (or export these in your shell) with:
+
+```
+DAGSTER_POSTGRES_USER=dagster
+DAGSTER_POSTGRES_PASSWORD=dagster
+DAGSTER_POSTGRES_DB=dagster
+DBT_PROFILES_DIR=/opt/project/brazillian_ecommerce_project
+GOOGLE_APPLICATION_CREDENTIALS=/opt/project/dsai-module2-project-c41b83e002bf.json
+```
+
+### Start Dagster
+
+```bash
+# From repository root
+docker compose up -d --build
+```
+
+- Dagster UI: `http://localhost:3000`
+- The Dagster instance uses Postgres for run/event/schedule storage.
+
+### Code locations and paths
+
+- Dagster code: `orchestration/dagster/*`
+- Project directories mounted inside containers at `/opt/project`
+- dbt project path inside containers: `/opt/project/brazillian_ecommerce_project`
+- Meltano project path inside containers: `/opt/project/meltano-csv`
+
+### Job and schedule
+
+- Job: `elt_job` runs Meltano EL then `dbt build`
+- Schedule: `daily_elt_02utc` runs every day at 02:00 UTC
+
+You can trigger a backfill or ad‑hoc run from the Dagster UI.
