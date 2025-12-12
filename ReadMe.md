@@ -1,14 +1,25 @@
 # Brazilian E-commerce Data Pipeline
-
-A comprehensive data pipeline project for processing Brazilian e-commerce data from Kaggle, extracting it to BigQuery, and transforming it using dbt.
+A comprehensive end-to-end analytics engineering project that ingests and transforms Brazilian e-commerce data from Kaggle into an analytics-ready data warehouse in BigQuery, using dbt for dimensional modeling, Power BI for business insights, and Dagster for pipeline orchestration.
 
 ## Project Overview
 
-This project implements an end-to-end data pipeline for the [Brazilian E-commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The pipeline includes:
+This project implements an end-to-end analytics engineering pipeline using the 
+[Brazilian E-commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
-- **Data Extraction & Loading (EL)**: Using Meltano to extract CSV files and load into Google BigQuery
-- **Data Transformation**: Using dbt for data modeling and transformations
-- **Data Analysis**: Tools and notebooks for exploratory data analysis
+Raw transactional data is ingested into Google BigQuery and transformed using dbt into a **dimensional (star-schema) data warehouse** designed for scalable business analytics and BI consumption.
+
+The pipeline includes:
+
+- **Data Extraction & Loading (EL)**  
+  Using Meltano to ingest raw CSV datasets and load them into Google BigQuery
+
+- **Analytics Engineering & Transformation**  
+  Using dbt to apply staging, dimensional modeling, business logic, and data quality tests
+
+- **Business Intelligence & Analysis**  
+  - Exploratory data analysis (EDA) performed using Python for initial data understanding
+  - Analytics and dashboards enabled in Power BI based on an analytics-ready star schema
+
 
 ## Project Structure
 
@@ -140,6 +151,44 @@ df = kagglehub.load_dataset(
 
 print("First 5 records:", df.head())
 ```
+## Analytics & Data Modeling Overview
+The modeling approach follows Kimball dimensional modeling best practices, with clearly defined grains, facts, and conformed dimensions to support repeatable, trustworthy business metrics.
+
+  **Business Questions Supported:**
+  - Customer behavior and repeat purchase patterns
+  - Customer experience drivers (delivery delays, reviews, complaints)
+  - Product and category performance
+  - Seller performance
+  - Geographic demand vs supply mismatch
+
+  **Chosen Business Processes & Grains**
+  - Order lifecycle & delivery:	fact_order	(One row per order)
+  - Sales & revenue:	fact_order_item	(One row per order item)
+  - Payments:	fact_payment	One row per payment transaction
+  - Reviews & satisfaction	fact_review	One row per review
+
+  **Key modeling decision**
+  - Customer retention and CLV are calculated using customer_unique_id (true customer identity across multiple orders)
+  - Reusable transformations are implemented as utility models (`util_*`) within the marts layer. These models are consumed directly by final fact and dimension tables to avoid duplicated logic.
+
+  ## Final Star Schema (Deliverables)
+      ### Dimensions
+      - `dim_customer`
+      - `dim_seller`
+      - `dim_products`
+      - `dim_category`
+      - `dim_location`
+      - `dim_date`
+      ### Facts
+      - `fact_orders`
+      - `fact_order_items`
+      - `fact_payments`
+      - `fact_reviews`
+      ### Utility (within marts)
+      - `util_products_enriched`
+      - `util_payments_by_order`
+      - `util_geo_zip_centroid`
+      - `util_orders_delivery_metrics` (optional)
 
 ## Important Notes
 
