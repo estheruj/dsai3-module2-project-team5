@@ -1,4 +1,4 @@
-SELECT 
+SELECT distinct
   O.order_id, 
   O.customer_id, 
   O.order_status, 
