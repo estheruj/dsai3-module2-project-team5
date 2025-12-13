@@ -1,0 +1,372 @@
+[{
+  "table_name": "stg_category_translation",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_category_translation",
+  "column_name": "product_category_name",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_category_translation",
+  "column_name": "product_category_name_english",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_customers",
+  "column_name": "customer_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_customers",
+  "column_name": "customer_unique_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_customers",
+  "column_name": "customer_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_customers",
+  "column_name": "customer_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_customers",
+  "column_name": "customer_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_geolocation",
+  "column_name": "geolocation_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_geolocation",
+  "column_name": "geolocation_lat",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_geolocation",
+  "column_name": "geolocation_lng",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_geolocation",
+  "column_name": "geolocation_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_geolocation",
+  "column_name": "geolocation_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "order_item_id",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "seller_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "shipping_limit_date",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "price",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_order_items",
+  "column_name": "freight_value",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_order_payments",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_payments",
+  "column_name": "payment_sequential",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "stg_order_payments",
+  "column_name": "payment_type",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_payments",
+  "column_name": "payment_installments",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "stg_order_payments",
+  "column_name": "payment_value",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_score",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_comment_title",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_comment_message",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_creation_date",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_order_reviews",
+  "column_name": "review_answer_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "customer_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_status",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_purchase_timestamp",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_approved_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_delivered_carrier_date",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_delivered_customer_date",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_orders",
+  "column_name": "order_estimated_delivery_date",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_category_name",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_name_length",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_description_length",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_photos_qty",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_weight_g",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_length_cm",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_height_cm",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_products",
+  "column_name": "product_width_cm",
+  "data_type": "NUMERIC",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "NUMERIC (NULLABLE)"
+}, {
+  "table_name": "stg_sellers",
+  "column_name": "seller_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_sellers",
+  "column_name": "seller_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_sellers",
+  "column_name": "seller_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "stg_sellers",
+  "column_name": "seller_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}]

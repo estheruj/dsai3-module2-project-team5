@@ -1,0 +1,750 @@
+[{
+  "table_name": "customers",
+  "column_name": "customer_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "customer_unique_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "customer_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "customer_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "customer_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "customers",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "geolocation_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "geolocation_lat",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "geolocation_lng",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "geolocation_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "geolocation_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "geolocation",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "order_item_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "seller_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "shipping_limit_date",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "price",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "freight_value",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "12",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_items",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "13",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "payment_sequential",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "payment_type",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "payment_installments",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "payment_value",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_payments",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_score",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_comment_title",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_comment_message",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_creation_date",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "review_answer_timestamp",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "12",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "order_reviews",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "13",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "customer_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_status",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_purchase_timestamp",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_approved_at",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_delivered_carrier_date",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_delivered_customer_date",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "order_estimated_delivery_date",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "12",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "13",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "orders",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "14",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "product_category_name",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "product_category_name_english",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "product_category_name_translation",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_category_name",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_name_lenght",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_description_lenght",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_photos_qty",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_weight_g",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_length_cm",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_height_cm",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "product_width_cm",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "11",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "12",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "13",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "14",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "products",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "15",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "seller_id",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "1",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "seller_zip_code_prefix",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "2",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "seller_city",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "3",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "seller_state",
+  "data_type": "STRING",
+  "is_nullable": "YES",
+  "ordinal_position": "4",
+  "full_type": "STRING (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_extracted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "5",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_batched_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "6",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_deleted_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "7",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_received_at",
+  "data_type": "TIMESTAMP",
+  "is_nullable": "YES",
+  "ordinal_position": "8",
+  "full_type": "TIMESTAMP (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_table_version",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "9",
+  "full_type": "INT64 (NULLABLE)"
+}, {
+  "table_name": "sellers",
+  "column_name": "_sdc_sequence",
+  "data_type": "INT64",
+  "is_nullable": "YES",
+  "ordinal_position": "10",
+  "full_type": "INT64 (NULLABLE)"
+}]
