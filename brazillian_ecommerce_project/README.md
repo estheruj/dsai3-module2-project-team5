@@ -1,10 +1,31 @@
-Welcome to your new dbt project!
+### 1. Run dbt Transformations
 
-### Using the starter project
+After data is loaded into BigQuery, navigate to the dbt project and run transformations:
 
-Try running the following commands:
-- dbt run
-- dbt test
+```bash
+cd brazillian_ecommerce_project
+```
+
+Run **dbt clean** to clean any existing dependencies
+
+```bash
+dbt clean
+```
+Run **dbt deps** to install packages from packages.yml
+
+```bash
+dbt deps
+```
+Run **dbt run** to materializes dbt models (tables, views) 
+
+```bash
+dbt run
+```
+Run **dbt test** to executes the data quality tests defined in the dbt project
+
+```bash
+dbt test
+```
 
 
 ### Resources:
