@@ -29,7 +29,7 @@ The pipeline includes:
 │   └── kaggle-raw/          # Raw CSV datasets from Kaggle
 ├── environment/
 │   └── proj2_environment.yml  # Conda environment configuration
-├── meltano-csv/             # Meltano ETL pipeline configuration
+├── meltano-csv/             # Meltano ELT pipeline configuration
 │   ├── meltano.yml          # Meltano project configuration
 │   └── README.md            # Detailed Meltano setup instructions
 ├── brazillian_ecommerce_project/  # dbt project for data transformations
@@ -64,7 +64,7 @@ Place your GCP service account key file (`dsai-module2-project-c41b83e002bf.json
 
 **Note:** The credentials file is already added to `.gitignore` to prevent accidental commits.
 
-### 3. Set Up Meltano ETL Pipeline
+### 3. Set Up Meltano ELT Pipeline
 
 Navigate to the Meltano project directory and follow the setup:
 
@@ -202,7 +202,7 @@ If you encounter a `BrokenPipeError: [WinError 109]` on Windows during Meltano e
 
 ## Documentation
 
-- **Meltano Setup**: See [meltano-csv/README.md](meltano-csv/README.md) for detailed ETL pipeline setup
+- **Meltano Setup**: See [meltano-csv/README.md](meltano-csv/README.md) for detailed ELT pipeline setup
 - **dbt Project**: See [brazillian_ecommerce_project/README.md](brazillian_ecommerce_project/README.md) for dbt transformation documentation
 
 ## Troubleshooting

@@ -1,4 +1,4 @@
-# Meltano ETL Pipeline
+# Meltano ELT Pipeline
 
 This directory contains the Meltano configuration and setup for extracting CSV data and loading it into BigQuery.
 
@@ -52,7 +52,7 @@ This will install:
 - `tap-csv`: CSV extractor
 - `target-bigquery`: BigQuery loader
 
-### 6. Run the ETL Pipeline
+### 6. Run the ELT Pipeline
 
 Execute the full pipeline to extract data from CSV files and load into BigQuery:
 
