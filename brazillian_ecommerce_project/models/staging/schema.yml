@@ -12,10 +12,16 @@ models:
           - not_null
       - name: product_category_name
         description: Original product category name, converted to lowercase.
+        tests:
+          - not_null
       - name: product_category_name_english
         description: English translation of the product category name, converted to lowercase.
         tests:
           - not_null
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list: [product_id, product_category_name, product_category_name_english]
 
   - name: stg_customers
     description: >
@@ -31,10 +37,27 @@ models:
           - not_null
       - name: customer_zip_code_prefix
         description: The first 5 digits of the customer's zip code.
+        tests:
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: customer_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: customer_city
         description: Customer's city, converted to lowercase.
+        tests:
+          - not_null
       - name: customer_state
         description: Customer's state, converted to lowercase.
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - customer_id
+            - customer_unique_id
+            - customer_zip_code_prefix
+            - customer_city
+            - customer_state
 
   - name: stg_geolocation
     description: >
@@ -46,12 +69,26 @@ models:
           - not_null
       - name: geolocation_city
         description: City name, converted to lowercase.
+        tests:
+          - not_null
       - name: geolocation_lat
         description: Latitude coordinate.
       - name: geolocation_lng
         description: Longitude coordinate.
       - name: geolocation_state
         description: State name, converted to lowercase.
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - geolocation_city
+            - geolocation_lat
+            - geolocation_lng
+            - geolocation_state
+            - geolocation_zip_code_prefix
+            
 
   - name: stg_order_items
     description: >
@@ -77,8 +114,27 @@ models:
         description: The latest date for the seller to ship the product.
       - name: price
         description: Item price, cast to NUMERIC.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10000
       - name: freight_value
         description: Freight value of the item, cast to NUMERIC.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - order_id
+            - order_item_id
+            - product_id
+            - seller_id
+            - shipping_limit_date
+            - price
+            - freight_value
 
   - name: stg_order_payments
     description: >
@@ -90,6 +146,8 @@ models:
           - not_null
       - name: payment_sequential
         description: Number indicating the sequence of payment if multiple payments were made for an order.
+        tests:
+          - not_null
       - name: payment_type
         description: Method of payment used (e.g., 'credit_card', 'voucher').
         tests:
@@ -101,6 +159,18 @@ models:
         description: Total value of the payment, cast to NUMERIC.
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50000
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - order_id
+            - payment_sequential
+            - payment_type
+            - payment_installments
+            - payment_value
 
   - name: stg_order_reviews
     description: >
@@ -125,6 +195,18 @@ models:
       - name: review_answer_timestamp
         description: Timestamp when the seller/system responded to the review.
 
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - review_id
+            - order_id
+            - review_score
+            - review_comment_title
+            - review_comment_message
+            - review_creation_date
+            - review_answer_timestamp
+
+
   - name: stg_orders
     description: >
       Staging model for main order information, including crucial status and timestamp fields.
@@ -144,8 +226,22 @@ models:
               values: ['delivered', 'shipped', 'invoiced', 'unavailable', 'canceled', 'created', 'approved', 'processing']
       - name: order_purchase_timestamp
         description: The time when the order was purchased.
+        tests:
+          - not_null
       - name: order_estimated_delivery_date
         description: Estimated date for customer delivery.
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - order_id
+            - customer_id
+            - order_status
+            - order_purchase_timestamp
+            - order_approved_at
+            - order_delivered_carrier_date
+            - order_delivered_customer_date
+            - order_estimated_delivery_date
 
   - name: stg_products
     description: >
@@ -159,12 +255,29 @@ models:
         description: Original product category name (used to join with `stg_category_translation`).
       - name: product_weight_g
         description: Product weight in grams, cast to NUMERIC.
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50000
       - name: product_length_cm
         description: Product length in centimeters, cast to NUMERIC.
       - name: product_height_cm
         description: Product height in centimeters, cast to NUMERIC.
       - name: product_width_cm
         description: Product width in centimeters, cast to NUMERIC.
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - product_id
+            - product_category_name
+            - product_name_length
+            - product_description_length
+            - product_photos_qty
+            - product_weight_g
+            - product_length_cm
+            - product_height_cm
+            - product_width_cm
 
   - name: stg_sellers
     description: >
@@ -176,7 +289,23 @@ models:
           - not_null
       - name: seller_zip_code_prefix
         description: The first 5 digits of the seller's zip code.
+        tests:
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: seller_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: seller_city
         description: Seller's city, converted to lowercase.
+        tests:
+          - not_null
       - name: seller_state
         description: Seller's state, converted to lowercase.
+        tests:
+          - not_null
+
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list:
+            - seller_id
+            - seller_zip_code_prefix
+            - seller_city
+            - seller_state
