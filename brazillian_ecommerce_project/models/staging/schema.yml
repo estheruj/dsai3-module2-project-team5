@@ -49,6 +49,8 @@ models:
         description: Customer's state, converted to lowercase.
         tests:
           - not_null
+          - dbt_expectations.expect_column_value_lengths_to_equal:
+              value: 2
 
     tests:
       - dbt_expectations.expect_table_columns_to_match_set:
@@ -79,6 +81,8 @@ models:
         description: State name, converted to lowercase.
         tests:
           - not_null
+          - dbt_expectations.expect_column_value_lengths_to_equal:
+              value: 2
 
     tests:
       - dbt_expectations.expect_table_columns_to_match_set:
@@ -301,6 +305,8 @@ models:
         description: Seller's state, converted to lowercase.
         tests:
           - not_null
+          - dbt_expectations.expect_column_value_lengths_to_equal:
+              value: 2
 
     tests:
       - dbt_expectations.expect_table_columns_to_match_set:

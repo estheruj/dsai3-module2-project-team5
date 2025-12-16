@@ -14,6 +14,8 @@ models:
           - not_null
       - name: product_category_name_english
         description: "The translated product category name in English."
+        tests:
+          - not_null
 
   - name: dim_customers
     description: "A dimension table for customer information, including their location details."
@@ -24,8 +26,14 @@ models:
           - not_null
       - name: customer_unique_id
         description: "An identifier for the customer across all purchases."
+        tests:
+          - not_null
       - name: customer_zip_prefix
         description: "The first 5 digits of the customer's zip code."
+        tests:
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: customer_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: location_key
         description: "The foreign key linking to the location dimension."
         tests:
@@ -50,10 +58,22 @@ models:
           - not_null
       - name: year
         description: "The calendar year (e.g., 2018)."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 2016
+              max_value: 2018
       - name: quarter
         description: "The calendar quarter (1-4)."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 4
       - name: month
         description: "The month number (1-12)."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              max_value: 12
       - name: is_weekend
         description: "Boolean flag: TRUE if the day is a weekend (Saturday or Sunday)."
         tests:
@@ -74,10 +94,19 @@ models:
         tests:
           - unique
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: customer_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: city
         description: "The most frequent city associated with the zip prefix."
+        tests:
+          - not_null
       - name: state
         description: "The most frequent state associated with the zip prefix."
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_value_lengths_to_equal:
+              value: 2
 
   - name: dim_products
     description: "A dimension table for product attributes, including category, name, and size/weight metrics."
@@ -90,6 +119,10 @@ models:
         description: "Product category name."
       - name: product_weight_g
         description: "Product weight in grams."
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 50000
 
   - name: dim_sellers
     description: "A dimension table for seller information, including their location."
@@ -101,6 +134,10 @@ models:
           - not_null
       - name: seller_zip_prefix
         description: "The first 5 digits of the seller's zip code."
+        tests:
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: customer_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: location_key
         description: "The foreign key linking to the location dimension."
         tests:
@@ -120,15 +157,22 @@ models:
           - not_null
       - name: order_id
         description: "The foreign key for the order."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_id
       - name: product_id
         description: "The foreign key for the product."
         tests:
+          - not_null
           - relationships:
               to: ref('dim_products')
               field: product_id
       - name: seller_id
         description: "The foreign key for the seller."
         tests:
+          - not_null
           - relationships:
               to: ref('dim_sellers')
               field: seller_id
@@ -148,15 +192,20 @@ models:
       - name: order_id
         description: "The identifier for the order."
         tests:
+          - unique
           - not_null
       - name: customer_id
         description: "The foreign key for the customer."
         tests:
+          - not_null
           - relationships:
               to: ref('dim_customers')
               field: customer_id
       - name: order_status
         description: "The current status of the order."
+        tests:
+          - accepted_values:
+              values: ['delivered','shipped','canceled','invoiced','processing','created','unavailable','approved']
       - name: purchase_date_key
         description: "Date key for the purchase date."
       - name: delivery_lead_time_days
@@ -165,6 +214,10 @@ models:
         description: "Difference in days between actual delivery and estimated delivery date."
       - name: delivery_is_late
         description: "Boolean flag: TRUE if the order was delivered later than estimated."
+        tests:
+          - accepted_values:
+              values: ['TRUE', 'FALSE']
+              quote: False
 
   - name: fact_payments
     description: "A transaction fact table detailing individual payments for an order."
@@ -175,6 +228,11 @@ models:
           - not_null
       - name: order_id
         description: "The foreign key for the order."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_id
       - name: payment_value
         description: "The value of the individual payment."
         tests:
@@ -203,8 +261,16 @@ models:
               quote: False
       - name: low_score_flag
         description: "Boolean flag: TRUE if the score is 2 or less."
+        tests:
+          - accepted_values:
+              values: ['TRUE', 'FALSE']
+              quote: False
       - name: complaint_text_present
         description: "Boolean flag: TRUE if the review comment message is not empty."
+        tests:
+          - accepted_values:
+              values: ['TRUE', 'FALSE']
+              quote: False
 
   # --------------------------------------------------------------------------
   # UTILITY MODELS (util_*)
@@ -217,6 +283,9 @@ models:
         tests:
           - unique
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              column_name: customer_zip_code_prefix
+              regex: '^[0-9]{5}$'
       - name: latitude
         description: "The calculated average latitude (centroid) for the zip prefix."
       - name: longitude
@@ -231,6 +300,10 @@ models:
           - not_null
       - name: delivery_is_late
         description: "TRUE if the delivered date is after the estimated delivery date."
+        tests:
+          - accepted_values:
+              values: ['TRUE', 'FALSE']
+              quote: False
 
   - name: util_payments_by_order
     description: "Intermediate model aggregating payment information to the order grain, identifying the primary payment type."
@@ -242,8 +315,13 @@ models:
           - not_null
       - name: total_payment_value
         description: "The sum of all payment values for the order."
+        tests:
+          - not_null
+          - dbt_utils.at_least_one
       - name: primary_payment_type
         description: "The most frequent payment type used for the order (mode)."
+        tests:
+          - not_null
 
   - name: util_products_enriched
     description: "Intermediate model joining product details with category name translations."
