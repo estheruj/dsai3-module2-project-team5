@@ -7,8 +7,6 @@ services:
       POSTGRES_USER: ${DAGSTER_POSTGRES_USER:-dagster}
       POSTGRES_PASSWORD: ${DAGSTER_POSTGRES_PASSWORD:-dagster}
       POSTGRES_DB: ${DAGSTER_POSTGRES_DB:-dagster}
-    ports:
-      - "5432:5432"
     volumes:
       - dagster_db:/var/lib/postgresql/data
 
@@ -26,6 +24,7 @@ services:
       DBT_PROFILES_DIR: ${DBT_PROFILES_DIR:-/opt/project/brazillian_ecommerce_project}
       GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS:-/opt/project/dsai-module2-project-c41b83e002bf.json}
       PYTHONPATH: /opt/dagster/app
+      MELTANO_DISABLE_TRACKING: "1"
     volumes:
       - ./orchestration/dagster/workspace.yaml:/opt/dagster/workspace.yaml:ro
       - ./orchestration/dagster/dagster.yaml:/opt/dagster/dagster.yaml:ro
@@ -49,6 +48,7 @@ services:
       DBT_PROFILES_DIR: ${DBT_PROFILES_DIR:-/opt/project/brazillian_ecommerce_project}
       GOOGLE_APPLICATION_CREDENTIALS: ${GOOGLE_APPLICATION_CREDENTIALS:-/opt/project/dsai-module2-project-c41b83e002bf.json}
       PYTHONPATH: /opt/dagster/app
+      MELTANO_DISABLE_TRACKING: "1"
     volumes:
       - ./orchestration/dagster/workspace.yaml:/opt/dagster/workspace.yaml:ro
       - ./orchestration/dagster/dagster.yaml:/opt/dagster/dagster.yaml:ro

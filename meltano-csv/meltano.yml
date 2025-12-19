@@ -66,6 +66,6 @@ plugins:
         location: US
         method: batch_job
         denormalized: true
-        credentials_path: ../dsai-module2-project-c41b83e002bf.json
+        credentials_path: /opt/project/dsai-module2-project-c41b83e002bf.json
         batch_size: 104857600
         timeout: 600
