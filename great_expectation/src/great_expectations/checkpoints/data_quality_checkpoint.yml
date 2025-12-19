@@ -1,0 +1,27 @@
+data_context:
+  class_name: DataContext
+  module_name: great_expectations.data_context
+
+checkpoints:
+  data_quality_checkpoint:
+    config_version: 1
+    expectation_suite_names:
+      - completeness_suite
+      - accuracy_suite
+      - uniqueness_suite
+      - validity_suite
+      - consistency_suite
+      - timeliness_suite
+    run_id: "{{ run_id }}"
+    action_list:
+      - name: store_validation_result
+        action: store_validation_result
+      - name: store_evaluation_params
+        action: store_evaluation_params
+      - name: store_metrics
+        action: store_metrics
+      - name: notify
+        action: notify
+    evaluation_parameters:
+      threshold: 0.98
+    run_on_all_expectations: true

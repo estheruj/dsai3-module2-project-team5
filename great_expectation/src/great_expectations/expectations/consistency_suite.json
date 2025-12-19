@@ -1,0 +1,38 @@
+{
+  "expectation_suite_name": "consistency_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "column_name_1",
+        "value_set": ["value1", "value2", "value3"],
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check for consistency in column_name_1"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_strftime_format",
+      "kwargs": {
+        "column": "column_name_2",
+        "strftime_format": "%Y-%m-%d",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check for date format consistency in column_name_2"
+      }
+    },
+    {
+      "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+      "kwargs": {
+        "column_a": "column_name_3",
+        "column_b": "column_name_4",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check that values in column_name_3 are greater than those in column_name_4"
+      }
+    }
+  ]
+}

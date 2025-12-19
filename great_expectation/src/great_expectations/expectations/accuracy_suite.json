@@ -1,0 +1,57 @@
+{
+  "expectation_suite_name": "accuracy_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "column_name",
+        "value_set": ["valid_value1", "valid_value2"],
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check if values in the column are within the expected set."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "column_name",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check if values in the column are unique."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "column_name",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check for completeness by ensuring no null values."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_strftime_format",
+      "kwargs": {
+        "column": "date_column",
+        "strftime_format": "%Y-%m-%d",
+        "mostly": 0.98
+      },
+      "meta": {
+        "notes": "Check if date values match the expected format."
+      }
+    },
+    {
+      "expectation_type": "expect_column_pair_values_a_to_be_greater_than_b",
+      "kwargs": {
+        "column_A": "start_date",
+        "column_B": "end_date"
+      },
+      "meta": {
+        "notes": "Ensure that start dates are before end dates."
+      }
+    }
+  ]
+}

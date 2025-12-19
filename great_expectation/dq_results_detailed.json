@@ -1,0 +1,2387 @@
+[
+  {
+    "table_name": "olist_sellers",
+    "column_name": "seller_id",
+    "data_type": "object",
+    "total_rows": 3095,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.940231"
+  },
+  {
+    "table_name": "olist_sellers",
+    "column_name": "seller_zip_code_prefix",
+    "data_type": "int64",
+    "total_rows": 3095,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 valid"
+    },
+    "uniqueness": {
+      "score": 72.57,
+      "valid_records": 2246,
+      "invalid_records": 849,
+      "details": "2246/3095 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.941102"
+  },
+  {
+    "table_name": "olist_sellers",
+    "column_name": "seller_city",
+    "data_type": "object",
+    "total_rows": 3095,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 valid"
+    },
+    "uniqueness": {
+      "score": 19.74,
+      "valid_records": 611,
+      "invalid_records": 2484,
+      "details": "611/3095 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.941920"
+  },
+  {
+    "table_name": "olist_sellers",
+    "column_name": "seller_state",
+    "data_type": "object",
+    "total_rows": 3095,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 valid"
+    },
+    "uniqueness": {
+      "score": 0.74,
+      "valid_records": 23,
+      "invalid_records": 3072,
+      "details": "23/3095 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 3095,
+      "invalid_records": 0,
+      "details": "3095/3095 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.942677"
+  },
+  {
+    "table_name": "product_category_name_translation",
+    "column_name": "product_id",
+    "data_type": "int64",
+    "total_rows": 71,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.943181"
+  },
+  {
+    "table_name": "product_category_name_translation",
+    "column_name": "product_category_name",
+    "data_type": "object",
+    "total_rows": 71,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.943463"
+  },
+  {
+    "table_name": "product_category_name_translation",
+    "column_name": "product_category_name_english",
+    "data_type": "object",
+    "total_rows": 71,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 71,
+      "invalid_records": 0,
+      "details": "71/71 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.943736"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_id",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.967609"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "customer_id",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:57.991686"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_status",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 0.01,
+      "valid_records": 8,
+      "invalid_records": 99433,
+      "details": "8/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.009157"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_purchase_timestamp",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 99.43,
+      "valid_records": 98875,
+      "invalid_records": 566,
+      "details": "98875/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.043040"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_approved_at",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 99.84,
+      "valid_records": 99281,
+      "invalid_records": 160,
+      "details": "99281/99441 non-null"
+    },
+    "validity": {
+      "score": 99.84,
+      "valid_records": 99281,
+      "invalid_records": 160,
+      "details": "99281/99441 valid"
+    },
+    "uniqueness": {
+      "score": 91.24,
+      "valid_records": 90733,
+      "invalid_records": 8708,
+      "details": "90733/99441 unique"
+    },
+    "accuracy": {
+      "score": 99.84,
+      "valid_records": 99281,
+      "invalid_records": 160,
+      "details": "99281/99441 accurate"
+    },
+    "consistency": {
+      "score": 99.84,
+      "valid_records": 99281,
+      "invalid_records": 160,
+      "details": "99281/99441 consistent"
+    },
+    "conformity": {
+      "score": 99.84,
+      "valid_records": 99281,
+      "invalid_records": 160,
+      "details": "99281/99441 conform"
+    },
+    "overall_score": 99.84,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.062913"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_delivered_carrier_date",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 98.21,
+      "valid_records": 97658,
+      "invalid_records": 1783,
+      "details": "97658/99441 non-null"
+    },
+    "validity": {
+      "score": 98.21,
+      "valid_records": 97658,
+      "invalid_records": 1783,
+      "details": "97658/99441 valid"
+    },
+    "uniqueness": {
+      "score": 81.47,
+      "valid_records": 81018,
+      "invalid_records": 18423,
+      "details": "81018/99441 unique"
+    },
+    "accuracy": {
+      "score": 98.21,
+      "valid_records": 97658,
+      "invalid_records": 1783,
+      "details": "97658/99441 accurate"
+    },
+    "consistency": {
+      "score": 98.21,
+      "valid_records": 97658,
+      "invalid_records": 1783,
+      "details": "97658/99441 consistent"
+    },
+    "conformity": {
+      "score": 98.21,
+      "valid_records": 97658,
+      "invalid_records": 1783,
+      "details": "97658/99441 conform"
+    },
+    "overall_score": 98.21,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.091942"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_delivered_customer_date",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 97.02,
+      "valid_records": 96476,
+      "invalid_records": 2965,
+      "details": "96476/99441 non-null"
+    },
+    "validity": {
+      "score": 97.02,
+      "valid_records": 96476,
+      "invalid_records": 2965,
+      "details": "96476/99441 valid"
+    },
+    "uniqueness": {
+      "score": 96.2,
+      "valid_records": 95664,
+      "invalid_records": 3777,
+      "details": "95664/99441 unique"
+    },
+    "accuracy": {
+      "score": 97.02,
+      "valid_records": 96476,
+      "invalid_records": 2965,
+      "details": "96476/99441 accurate"
+    },
+    "consistency": {
+      "score": 97.02,
+      "valid_records": 96476,
+      "invalid_records": 2965,
+      "details": "96476/99441 consistent"
+    },
+    "conformity": {
+      "score": 97.02,
+      "valid_records": 96476,
+      "invalid_records": 2965,
+      "details": "96476/99441 conform"
+    },
+    "overall_score": 97.02,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.122245"
+  },
+  {
+    "table_name": "olist_orders",
+    "column_name": "order_estimated_delivery_date",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 0.46,
+      "valid_records": 459,
+      "invalid_records": 98982,
+      "details": "459/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.145524"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "order_id",
+    "data_type": "object",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 87.59,
+      "valid_records": 98666,
+      "invalid_records": 13984,
+      "details": "98666/112650 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.172149"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "order_item_id",
+    "data_type": "int64",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 0.02,
+      "valid_records": 21,
+      "invalid_records": 112629,
+      "details": "21/112650 unique"
+    },
+    "accuracy": {
+      "score": 87.59,
+      "valid_records": 98666,
+      "invalid_records": 13984,
+      "details": "98666/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 97.52,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.174566"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "product_id",
+    "data_type": "object",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 29.25,
+      "valid_records": 32951,
+      "invalid_records": 79699,
+      "details": "32951/112650 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.197579"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "seller_id",
+    "data_type": "object",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 2.75,
+      "valid_records": 3095,
+      "invalid_records": 109555,
+      "details": "3095/112650 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.218770"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "shipping_limit_date",
+    "data_type": "object",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 82.84,
+      "valid_records": 93318,
+      "invalid_records": 19332,
+      "details": "93318/112650 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.254757"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "price",
+    "data_type": "float64",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 5.3,
+      "valid_records": 5968,
+      "invalid_records": 106682,
+      "details": "5968/112650 unique"
+    },
+    "accuracy": {
+      "score": 92.52,
+      "valid_records": 104223,
+      "invalid_records": 8427,
+      "details": "104223/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 98.5,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.261843"
+  },
+  {
+    "table_name": "olist_order_items",
+    "column_name": "freight_value",
+    "data_type": "float64",
+    "total_rows": 112650,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 valid"
+    },
+    "uniqueness": {
+      "score": 6.21,
+      "valid_records": 6999,
+      "invalid_records": 105651,
+      "details": "6999/112650 unique"
+    },
+    "accuracy": {
+      "score": 89.23,
+      "valid_records": 100516,
+      "invalid_records": 12134,
+      "details": "100516/112650 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 112650,
+      "invalid_records": 0,
+      "details": "112650/112650 conform"
+    },
+    "overall_score": 97.85,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.268428"
+  },
+  {
+    "table_name": "olist_customers",
+    "column_name": "customer_id",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.292139"
+  },
+  {
+    "table_name": "olist_customers",
+    "column_name": "customer_unique_id",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 96.64,
+      "valid_records": 96096,
+      "invalid_records": 3345,
+      "details": "96096/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.315556"
+  },
+  {
+    "table_name": "olist_customers",
+    "column_name": "customer_zip_code_prefix",
+    "data_type": "int64",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 15.08,
+      "valid_records": 14994,
+      "invalid_records": 84447,
+      "details": "14994/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.319421"
+  },
+  {
+    "table_name": "olist_customers",
+    "column_name": "customer_city",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 4.14,
+      "valid_records": 4119,
+      "invalid_records": 95322,
+      "details": "4119/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.336764"
+  },
+  {
+    "table_name": "olist_customers",
+    "column_name": "customer_state",
+    "data_type": "object",
+    "total_rows": 99441,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 valid"
+    },
+    "uniqueness": {
+      "score": 0.03,
+      "valid_records": 27,
+      "invalid_records": 99414,
+      "details": "27/99441 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99441,
+      "invalid_records": 0,
+      "details": "99441/99441 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.353268"
+  },
+  {
+    "table_name": "olist_geolocation",
+    "column_name": "geolocation_zip_code_prefix",
+    "data_type": "int64",
+    "total_rows": 1000163,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 valid"
+    },
+    "uniqueness": {
+      "score": 1.9,
+      "valid_records": 19015,
+      "invalid_records": 981148,
+      "details": "19015/1000163 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.365513"
+  },
+  {
+    "table_name": "olist_geolocation",
+    "column_name": "geolocation_lat",
+    "data_type": "float64",
+    "total_rows": 1000163,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 valid"
+    },
+    "uniqueness": {
+      "score": 71.72,
+      "valid_records": 717363,
+      "invalid_records": 282800,
+      "details": "717363/1000163 unique"
+    },
+    "accuracy": {
+      "score": 83.18,
+      "valid_records": 831923,
+      "invalid_records": 168240,
+      "details": "831923/1000163 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 conform"
+    },
+    "overall_score": 96.64,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.424407"
+  },
+  {
+    "table_name": "olist_geolocation",
+    "column_name": "geolocation_lng",
+    "data_type": "float64",
+    "total_rows": 1000163,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 valid"
+    },
+    "uniqueness": {
+      "score": 71.75,
+      "valid_records": 717615,
+      "invalid_records": 282548,
+      "details": "717615/1000163 unique"
+    },
+    "accuracy": {
+      "score": 95.77,
+      "valid_records": 957815,
+      "invalid_records": 42348,
+      "details": "957815/1000163 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 conform"
+    },
+    "overall_score": 99.15,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.482187"
+  },
+  {
+    "table_name": "olist_geolocation",
+    "column_name": "geolocation_city",
+    "data_type": "object",
+    "total_rows": 1000163,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 valid"
+    },
+    "uniqueness": {
+      "score": 0.8,
+      "valid_records": 8011,
+      "invalid_records": 992152,
+      "details": "8011/1000163 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.650269"
+  },
+  {
+    "table_name": "olist_geolocation",
+    "column_name": "geolocation_state",
+    "data_type": "object",
+    "total_rows": 1000163,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 valid"
+    },
+    "uniqueness": {
+      "score": 0.0,
+      "valid_records": 27,
+      "invalid_records": 1000136,
+      "details": "27/1000163 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 1000163,
+      "invalid_records": 0,
+      "details": "1000163/1000163 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.805077"
+  },
+  {
+    "table_name": "olist_order_payments",
+    "column_name": "order_id",
+    "data_type": "object",
+    "total_rows": 103886,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 valid"
+    },
+    "uniqueness": {
+      "score": 95.72,
+      "valid_records": 99440,
+      "invalid_records": 4446,
+      "details": "99440/103886 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.828687"
+  },
+  {
+    "table_name": "olist_order_payments",
+    "column_name": "payment_sequential",
+    "data_type": "int64",
+    "total_rows": 103886,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 valid"
+    },
+    "uniqueness": {
+      "score": 0.03,
+      "valid_records": 29,
+      "invalid_records": 103857,
+      "details": "29/103886 unique"
+    },
+    "accuracy": {
+      "score": 95.64,
+      "valid_records": 99360,
+      "invalid_records": 4526,
+      "details": "99360/103886 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 conform"
+    },
+    "overall_score": 99.13,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.830734"
+  },
+  {
+    "table_name": "olist_order_payments",
+    "column_name": "payment_type",
+    "data_type": "object",
+    "total_rows": 103886,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 valid"
+    },
+    "uniqueness": {
+      "score": 0.0,
+      "valid_records": 5,
+      "invalid_records": 103881,
+      "details": "5/103886 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.848231"
+  },
+  {
+    "table_name": "olist_order_payments",
+    "column_name": "payment_installments",
+    "data_type": "int64",
+    "total_rows": 103886,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 valid"
+    },
+    "uniqueness": {
+      "score": 0.02,
+      "valid_records": 24,
+      "invalid_records": 103862,
+      "details": "24/103886 unique"
+    },
+    "accuracy": {
+      "score": 93.92,
+      "valid_records": 97573,
+      "invalid_records": 6313,
+      "details": "97573/103886 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 conform"
+    },
+    "overall_score": 98.78,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.851547"
+  },
+  {
+    "table_name": "olist_order_payments",
+    "column_name": "payment_value",
+    "data_type": "float64",
+    "total_rows": 103886,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 valid"
+    },
+    "uniqueness": {
+      "score": 27.99,
+      "valid_records": 29077,
+      "invalid_records": 74809,
+      "details": "29077/103886 unique"
+    },
+    "accuracy": {
+      "score": 92.32,
+      "valid_records": 95905,
+      "invalid_records": 7981,
+      "details": "95905/103886 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 103886,
+      "invalid_records": 0,
+      "details": "103886/103886 conform"
+    },
+    "overall_score": 98.46,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.858112"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_id",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 valid"
+    },
+    "uniqueness": {
+      "score": 99.18,
+      "valid_records": 98410,
+      "invalid_records": 814,
+      "details": "98410/99224 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.881855"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "order_id",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 valid"
+    },
+    "uniqueness": {
+      "score": 99.44,
+      "valid_records": 98673,
+      "invalid_records": 551,
+      "details": "98673/99224 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.905309"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_score",
+    "data_type": "int64",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 valid"
+    },
+    "uniqueness": {
+      "score": 0.01,
+      "valid_records": 5,
+      "invalid_records": 99219,
+      "details": "5/99224 unique"
+    },
+    "accuracy": {
+      "score": 85.31,
+      "valid_records": 84649,
+      "invalid_records": 14575,
+      "details": "84649/99224 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 conform"
+    },
+    "overall_score": 97.06,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.907978"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_comment_title",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 11.66,
+      "valid_records": 11568,
+      "invalid_records": 87656,
+      "details": "11568/99224 non-null"
+    },
+    "validity": {
+      "score": 11.66,
+      "valid_records": 11566,
+      "invalid_records": 87658,
+      "details": "11566/99224 valid"
+    },
+    "uniqueness": {
+      "score": 4.56,
+      "valid_records": 4527,
+      "invalid_records": 94697,
+      "details": "4527/99224 unique"
+    },
+    "accuracy": {
+      "score": 11.66,
+      "valid_records": 11568,
+      "invalid_records": 87656,
+      "details": "11568/99224 accurate"
+    },
+    "consistency": {
+      "score": 11.66,
+      "valid_records": 11568,
+      "invalid_records": 87656,
+      "details": "11568/99224 consistent"
+    },
+    "conformity": {
+      "score": 11.66,
+      "valid_records": 11568,
+      "invalid_records": 87656,
+      "details": "11568/99224 conform"
+    },
+    "overall_score": 11.66,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.927040"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_comment_message",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 41.3,
+      "valid_records": 40977,
+      "invalid_records": 58247,
+      "details": "40977/99224 non-null"
+    },
+    "validity": {
+      "score": 41.27,
+      "valid_records": 40950,
+      "invalid_records": 58274,
+      "details": "40950/99224 valid"
+    },
+    "uniqueness": {
+      "score": 36.44,
+      "valid_records": 36159,
+      "invalid_records": 63065,
+      "details": "36159/99224 unique"
+    },
+    "accuracy": {
+      "score": 41.3,
+      "valid_records": 40977,
+      "invalid_records": 58247,
+      "details": "40977/99224 accurate"
+    },
+    "consistency": {
+      "score": 41.3,
+      "valid_records": 40977,
+      "invalid_records": 58247,
+      "details": "40977/99224 consistent"
+    },
+    "conformity": {
+      "score": 41.3,
+      "valid_records": 40977,
+      "invalid_records": 58247,
+      "details": "40977/99224 conform"
+    },
+    "overall_score": 41.29,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:58.951098"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_creation_date",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 valid"
+    },
+    "uniqueness": {
+      "score": 0.64,
+      "valid_records": 636,
+      "invalid_records": 98588,
+      "details": "636/99224 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:58.983191"
+  },
+  {
+    "table_name": "olist_order_reviews",
+    "column_name": "review_answer_timestamp",
+    "data_type": "object",
+    "total_rows": 99224,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 valid"
+    },
+    "uniqueness": {
+      "score": 99.02,
+      "valid_records": 98248,
+      "invalid_records": 976,
+      "details": "98248/99224 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 99224,
+      "invalid_records": 0,
+      "details": "99224/99224 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.017520"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_id",
+    "data_type": "object",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 non-null"
+    },
+    "validity": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 valid"
+    },
+    "uniqueness": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 unique"
+    },
+    "accuracy": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 accurate"
+    },
+    "consistency": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 consistent"
+    },
+    "conformity": {
+      "score": 100.0,
+      "valid_records": 32951,
+      "invalid_records": 0,
+      "details": "32951/32951 conform"
+    },
+    "overall_score": 100.0,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.025288"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_category_name",
+    "data_type": "object",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 non-null"
+    },
+    "validity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.22,
+      "valid_records": 73,
+      "invalid_records": 32878,
+      "details": "73/32951 unique"
+    },
+    "accuracy": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 accurate"
+    },
+    "consistency": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 consistent"
+    },
+    "conformity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 conform"
+    },
+    "overall_score": 98.15,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.031086"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_name_lenght",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 non-null"
+    },
+    "validity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.2,
+      "valid_records": 66,
+      "invalid_records": 32885,
+      "details": "66/32951 unique"
+    },
+    "accuracy": {
+      "score": 97.27,
+      "valid_records": 32051,
+      "invalid_records": 900,
+      "details": "32051/32951 accurate"
+    },
+    "consistency": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 consistent"
+    },
+    "conformity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 conform"
+    },
+    "overall_score": 97.97,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:59.033710"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_description_lenght",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 non-null"
+    },
+    "validity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 valid"
+    },
+    "uniqueness": {
+      "score": 8.98,
+      "valid_records": 2960,
+      "invalid_records": 29991,
+      "details": "2960/32951 unique"
+    },
+    "accuracy": {
+      "score": 91.84,
+      "valid_records": 30263,
+      "invalid_records": 2688,
+      "details": "30263/32951 accurate"
+    },
+    "consistency": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 consistent"
+    },
+    "conformity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 conform"
+    },
+    "overall_score": 96.89,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:59.036366"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_photos_qty",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 non-null"
+    },
+    "validity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.06,
+      "valid_records": 19,
+      "invalid_records": 32932,
+      "details": "19/32951 unique"
+    },
+    "accuracy": {
+      "score": 95.57,
+      "valid_records": 31492,
+      "invalid_records": 1459,
+      "details": "31492/32951 accurate"
+    },
+    "consistency": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 consistent"
+    },
+    "conformity": {
+      "score": 98.15,
+      "valid_records": 32341,
+      "invalid_records": 610,
+      "details": "32341/32951 conform"
+    },
+    "overall_score": 97.63,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:59.038627"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_weight_g",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 non-null"
+    },
+    "validity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 valid"
+    },
+    "uniqueness": {
+      "score": 6.69,
+      "valid_records": 2204,
+      "invalid_records": 30747,
+      "details": "2204/32951 unique"
+    },
+    "accuracy": {
+      "score": 86.18,
+      "valid_records": 28398,
+      "invalid_records": 4553,
+      "details": "28398/32951 accurate"
+    },
+    "consistency": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 consistent"
+    },
+    "conformity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 conform"
+    },
+    "overall_score": 97.23,
+    "overall_passed": false,
+    "timestamp": "2025-12-10T21:46:59.041234"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_length_cm",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 non-null"
+    },
+    "validity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.3,
+      "valid_records": 99,
+      "invalid_records": 32852,
+      "details": "99/32951 unique"
+    },
+    "accuracy": {
+      "score": 95.81,
+      "valid_records": 31569,
+      "invalid_records": 1382,
+      "details": "31569/32951 accurate"
+    },
+    "consistency": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 consistent"
+    },
+    "conformity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 conform"
+    },
+    "overall_score": 99.15,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.043322"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_height_cm",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 non-null"
+    },
+    "validity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.31,
+      "valid_records": 102,
+      "invalid_records": 32849,
+      "details": "102/32951 unique"
+    },
+    "accuracy": {
+      "score": 94.25,
+      "valid_records": 31057,
+      "invalid_records": 1894,
+      "details": "31057/32951 accurate"
+    },
+    "consistency": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 consistent"
+    },
+    "conformity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 conform"
+    },
+    "overall_score": 98.84,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.045229"
+  },
+  {
+    "table_name": "olist_products",
+    "column_name": "product_width_cm",
+    "data_type": "float64",
+    "total_rows": 32951,
+    "completeness": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 non-null"
+    },
+    "validity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 valid"
+    },
+    "uniqueness": {
+      "score": 0.29,
+      "valid_records": 95,
+      "invalid_records": 32856,
+      "details": "95/32951 unique"
+    },
+    "accuracy": {
+      "score": 97.23,
+      "valid_records": 32037,
+      "invalid_records": 914,
+      "details": "32037/32951 accurate"
+    },
+    "consistency": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 consistent"
+    },
+    "conformity": {
+      "score": 99.99,
+      "valid_records": 32949,
+      "invalid_records": 2,
+      "details": "32949/32951 conform"
+    },
+    "overall_score": 99.44,
+    "overall_passed": true,
+    "timestamp": "2025-12-10T21:46:59.047337"
+  }
+]

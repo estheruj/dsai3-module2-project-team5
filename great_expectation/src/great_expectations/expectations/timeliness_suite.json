@@ -1,0 +1,54 @@
+{
+  "expectation_suite_name": "timeliness_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "min_value": 1,
+        "max_value": 1000000
+      },
+      "meta": {
+        "description": "Check that the table has a reasonable number of rows."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "timestamp_column",
+        "value_set": ["2023-01-01", "2023-01-02", "2023-01-03"]
+      },
+      "meta": {
+        "description": "Check that the timestamp column contains valid dates."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "id_column"
+      },
+      "meta": {
+        "description": "Check that the ID column has unique values."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "status_column",
+        "value_set": ["active", "inactive", "pending"]
+      },
+      "meta": {
+        "description": "Check that the status column contains valid statuses."
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "created_at",
+        "value_set": ["2023-01-01", "2023-01-02", "2023-01-03"]
+      },
+      "meta": {
+        "description": "Check that the created_at column contains valid timestamps."
+      }
+    }
+  ]
+}

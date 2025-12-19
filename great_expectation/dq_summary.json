@@ -1,0 +1,145 @@
+{
+  "total_columns": 53,
+  "passed_columns": 42,
+  "failed_columns": 11,
+  "overall_pass_rate": 79.25,
+  "threshold": 98.0,
+  "total_tables": 9,
+  "tables": {
+    "olist_sellers": {
+      "total_columns": 4,
+      "passed_columns": 4,
+      "failed_columns": 0,
+      "scores": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "average_score": 100.0,
+      "passed": true
+    },
+    "product_category_name_translation": {
+      "total_columns": 3,
+      "passed_columns": 3,
+      "failed_columns": 0,
+      "scores": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "average_score": 100.0,
+      "passed": true
+    },
+    "olist_orders": {
+      "total_columns": 8,
+      "passed_columns": 7,
+      "failed_columns": 1,
+      "scores": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        99.84,
+        98.21,
+        97.02,
+        100.0
+      ],
+      "average_score": 99.38,
+      "passed": true
+    },
+    "olist_order_items": {
+      "total_columns": 7,
+      "passed_columns": 5,
+      "failed_columns": 2,
+      "scores": [
+        100.0,
+        97.52,
+        100.0,
+        100.0,
+        100.0,
+        98.5,
+        97.85
+      ],
+      "average_score": 99.12,
+      "passed": true
+    },
+    "olist_customers": {
+      "total_columns": 5,
+      "passed_columns": 5,
+      "failed_columns": 0,
+      "scores": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "average_score": 100.0,
+      "passed": true
+    },
+    "olist_geolocation": {
+      "total_columns": 5,
+      "passed_columns": 4,
+      "failed_columns": 1,
+      "scores": [
+        100.0,
+        96.64,
+        99.15,
+        100.0,
+        100.0
+      ],
+      "average_score": 99.16,
+      "passed": true
+    },
+    "olist_order_payments": {
+      "total_columns": 5,
+      "passed_columns": 5,
+      "failed_columns": 0,
+      "scores": [
+        100.0,
+        99.13,
+        100.0,
+        98.78,
+        98.46
+      ],
+      "average_score": 99.27,
+      "passed": true
+    },
+    "olist_order_reviews": {
+      "total_columns": 7,
+      "passed_columns": 4,
+      "failed_columns": 3,
+      "scores": [
+        100.0,
+        100.0,
+        97.06,
+        11.66,
+        41.29,
+        100.0,
+        100.0
+      ],
+      "average_score": 78.57,
+      "passed": false
+    },
+    "olist_products": {
+      "total_columns": 9,
+      "passed_columns": 5,
+      "failed_columns": 4,
+      "scores": [
+        100.0,
+        98.15,
+        97.97,
+        96.89,
+        97.63,
+        97.23,
+        99.15,
+        98.84,
+        99.44
+      ],
+      "average_score": 98.37,
+      "passed": true
+    }
+  },
+  "timestamp": "2025-12-10T21:46:59.047374"
+}

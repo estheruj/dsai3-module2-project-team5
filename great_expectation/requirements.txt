@@ -1,0 +1,8 @@
+great_expectations
+pandas
+flask
+sqlalchemy
+dash
+plotly
+pytest
+pyyaml

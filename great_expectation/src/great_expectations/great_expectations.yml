@@ -1,0 +1,60 @@
+data_context:
+  class_name: DataContext
+  module_name: great_expectations.data_context
+  data_sources:
+    my_database:
+      class_name: Datasource
+      module_name: great_expectations.datasource
+      execution_engine:
+        class_name: SqlAlchemyExecutionEngine
+        module_name: great_expectations.execution_engine
+        connection_string: "your_database_connection_string"
+      data_connectors:
+        my_data_connector:
+          class_name: ConfiguredAssetSqlDataConnector
+          module_name: great_expectations.datasource.data_connector
+          assets:
+            my_table:
+              table_name: "your_table_name"
+              schema: "your_schema_name"
+  expectations_store_name: expectations
+  validations_store_name: validations
+  evaluation_parameter_store_name: evaluation_parameters
+  checkpoints_store_name: checkpoints
+  profiling_store_name: profiling
+  data_docs:
+    sites:
+      local_site:
+        class_name: SiteBuilder
+        module_name: great_expectations.data_docs.site_builder
+        site_index_builder:
+          class_name: SiteIndexBuilder
+          module_name: great_expectations.data_docs.site_index_builder
+  anonymous_usage_statistics:
+    enabled: false
+  stores:
+    expectations:
+      class_name: ExpectationsStore
+      module_name: great_expectations.data_context.store
+    validations:
+      class_name: ValidationsStore
+      module_name: great_expectations.data_context.store
+    evaluation_parameters:
+      class_name: EvaluationParameterStore
+      module_name: great_expectations.data_context.store
+    checkpoints:
+      class_name: CheckpointsStore
+      module_name: great_expectations.data_context.store
+    profiling:
+      class_name: ProfilingStore
+      module_name: great_expectations.data_context.store
+  config_version: 2.0
+  data_docs_sites:
+    local_site:
+      class_name: SiteBuilder
+      module_name: great_expectations.data_docs.site_builder
+      site_index_builder:
+        class_name: SiteIndexBuilder
+        module_name: great_expectations.data_docs.site_index_builder
+      site_index_url: "http://localhost:8080"
+      site_index_path: "data_docs/local_site/index.html"
